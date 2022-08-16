@@ -25,14 +25,6 @@ $pagination-page-link-color-active: #fff !default;
     flex-direction: column;
   }
 
-  &.position-bottom {
-    padding-top: 30px;
-  }
-
-  &.position-top {
-    padding-bottom: 30px;
-  }
-
   .pagination-limit {
     align-items: center;
     color: #033333;
