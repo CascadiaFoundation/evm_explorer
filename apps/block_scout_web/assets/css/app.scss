@@ -5,10 +5,6 @@
   display: none;
 }
 
-.alert {
-  border-radius: 0px !important;
-}
-
 /* This file is for your main application css. */
 
 // Font Awesome
@@ -128,7 +124,6 @@ $fa-font-path: "~@fortawesome/fontawesome-free/webfonts";
 @import "components/_dropzone";
 @import "components/_search";
 @import "components/_ad";
-@import "components/section";
 // Font Awesome
 @import "components/_fontawesome_icon";
 
