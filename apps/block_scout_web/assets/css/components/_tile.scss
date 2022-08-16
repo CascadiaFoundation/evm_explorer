@@ -43,10 +43,7 @@ $tile-body-a-color: #5959d8 !default;
     }
 
     .tile-transaction-type-block {
-      background-color: rgba($color, 0.1);
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
+      background-color: #2F3031 !important;
       color: $color;
     }
   }
@@ -55,10 +52,9 @@ $tile-body-a-color: #5959d8 !default;
 /*********************************************************************/
 
 .tile-label {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.2;
-  margin: 0 0 2px;
   text-align: center;
 
   &:last-child {
@@ -72,10 +68,10 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile-transaction-type-block {
   align-items: center;
-  bottom: -17px;
+  bottom: -1rem;
   justify-content: center;
   margin-left: -1px;
-  margin-top: -34px;
+  margin-top: -2rem;
   padding: 0 5px;
   position: relative;
 
@@ -96,11 +92,11 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-status-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
-  padding: 0 5px;
+  padding: 5px;
 }
 
 .tile-transaction-type-block {
@@ -176,7 +172,7 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile {
   span[data-address-hash] {
-    color: $tile-body-a-color;
+    color: $dark-primary;
   }
 
   a[data-test=token_link] {
@@ -210,8 +206,8 @@ $tile-body-a-color: #5959d8 !default;
   border-radius: 0px;
   color: $text-muted;
   flex-grow: 1;
-  font-size: 12px;
-  line-height: 1.4rem;
+  font-size: 14px;
+  line-height: 1.5rem;
   padding: $tile-padding;
 
   @include generate-tile-block(

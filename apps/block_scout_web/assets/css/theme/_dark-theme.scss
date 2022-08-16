@@ -220,10 +220,14 @@ $dark-stakes-banned-background: #3e314c;
 	.cube-animation-title {
 		color: $labels-dark;
 	}
-	.tile .tile-body a,
+	
 	.tile a:hover,
-	.tile span[data-address-hash],
 	.tile a[data-test=token_link] { color: $dark-primary; }
+	
+	.tile .tile-body a,
+	.tile span[data-address-hash] {
+		color: $dark-secondary;
+	}
 	.fade-up-blocks-chain .tile-type-block-animation .tile-type-line-up {
 		background-color: $dark-primary;
 	}
