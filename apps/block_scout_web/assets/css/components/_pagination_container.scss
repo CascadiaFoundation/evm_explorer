@@ -1,7 +1,7 @@
-$pagination-page-link-background: #f5f6fa !default;
-$pagination-page-link-color: #a3a9b5 !default;
-$pagination-page-link-background-active: $primary !default;
-$pagination-page-link-color-active: #fff !default;
+$pagination-page-link-background: #E4E6EB !default;
+$pagination-page-link-color: #18191A !default;
+$pagination-page-link-background-active: #E4E6EB !default;
+$pagination-page-link-color-active: #18191A !default;
 
 @mixin pagination-container-base($background-color, $text-color) {
   background-color: $background-color;
@@ -72,11 +72,11 @@ $pagination-page-link-color-active: #fff !default;
     .page-link {
       @include pagination-container-base($pagination-page-link-background, $pagination-page-link-color);
       align-items: center;
-      border-radius: 2px;
+      border-radius: 0px;
       display: flex;
-      font-size: 12px;
-      font-weight: 600;
-      height: 24px;
+      font-size: 14px;
+      font-weight: 400;
+      height: 100%;
       margin: 0;
       padding: 0 8px;
       position: relative;
@@ -162,15 +162,15 @@ $pagination-page-link-color-active: #fff !default;
 
 .page-number {
   background-color: $pagination-page-link-background;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 2px;
+  border: none;
+  border-radius: 0px;
   border-color: $pagination-page-link-color;
   color: $pagination-page-link-color;
 }
 
-.page-number:focus {
-  border: 1px solid $pagination-page-link-color;
+.page-number:focus, .page-number:focus-visible {
+  border: none;
+  outline: none;
 }
 
 .fml5 {
