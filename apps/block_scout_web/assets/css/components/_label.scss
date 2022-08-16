@@ -1,15 +1,15 @@
 .bs-label {
     display: inline-block;
-    padding: 0 5px;
-    background: #f5f6fa;
-    color: #77838f;
-    border-radius: 5px;
+    padding: 0 8px;
+    background: #18191A;
+    color: $dark-secondary;
+    border-radius: 0px;
     &.large {
         font-size: 14px;
     }
-    font-size: 12px;
-    padding: 5px;
-    line-height: normal;
+    font-size: 14px;
+    padding: 0 8px;
+    line-height: 1.5rem;
 
     &.right {
         margin-left: auto;
@@ -44,7 +44,7 @@
         color: #fff;
     }
     &.method {
-        color: #1e2022;
+        color: $dark-secondary;
     }
     &.from-dropdown {
         margin-top: -3px;

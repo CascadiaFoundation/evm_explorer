@@ -1,8 +1,8 @@
-$body-dark: #1c1d31; // body background
+$body-dark: #18191A; // body background
 $dark-bg: #22223a; // hero shade
-$dark-light-bg: #282945; // pills bg shade
-$dark-light: #313355; // tile light top share
-$labels-dark: #8a8dba; // header nav, labels
+$dark-light-bg: #242526; // pills bg shade
+$dark-light: #242526; // tile light top share
+$labels-dark: #E4E6EB; // header nav, labels
 $dark-stakes-banned-background: #3e314c;
 
 // Switcher
@@ -200,7 +200,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 	.tile-bottom-contents {
-		background-color: $dark-bg;
+		background-color: transparent;
 	}
 	a.tile-title {
 		color: #fff !important;
@@ -220,10 +220,14 @@ $dark-stakes-banned-background: #3e314c;
 	.cube-animation-title {
 		color: $labels-dark;
 	}
-	.tile .tile-body a,
+	
 	.tile a:hover,
-	.tile span[data-address-hash],
 	.tile a[data-test=token_link] { color: $dark-primary; }
+	
+	.tile .tile-body a,
+	.tile span[data-address-hash] {
+		color: $dark-secondary;
+	}
 	.fade-up-blocks-chain .tile-type-block-animation .tile-type-line-up {
 		background-color: $dark-primary;
 	}
