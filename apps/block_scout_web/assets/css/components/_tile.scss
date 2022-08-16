@@ -14,12 +14,11 @@ $tile-type-progress-bar-color: $primary !default;
 $tile-status-error-reason: #ff7986 !default;
 $tile-status-awaiting-internal-transactions: $warning !default;
 $tile-padding: 1rem;
-$tile-title-color: #333 !default;
+$tile-title-color: #E4E6EB !default;
 $tile-body-a-color: #5959d8 !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
   &#{ $prefix } {
-    border-left: 4px solid $color;
 
     .tile-transaction-type-block {
       a {
@@ -44,10 +43,7 @@ $tile-body-a-color: #5959d8 !default;
     }
 
     .tile-transaction-type-block {
-      background-color: rgba($color, 0.1);
-      border-bottom: 1px solid $color;
-      border-right: 1px solid $color;
-      border-top: 1px solid $color;
+      background-color: #2F3031 !important;
       color: $color;
     }
   }
@@ -56,10 +52,9 @@ $tile-body-a-color: #5959d8 !default;
 /*********************************************************************/
 
 .tile-label {
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 1rem;
+  font-weight: 400;
   line-height: 1.2;
-  margin: 0 0 2px;
   text-align: center;
 
   &:last-child {
@@ -73,10 +68,10 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile-transaction-type-block {
   align-items: center;
-  bottom: -17px;
+  bottom: -1rem;
   justify-content: center;
   margin-left: -1px;
-  margin-top: -34px;
+  margin-top: -2rem;
   padding: 0 5px;
   position: relative;
 
@@ -97,11 +92,11 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-status-label {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
   line-height: 1.2;
   text-align: center;
-  padding: 0 5px;
+  padding: 5px;
 }
 
 .tile-transaction-type-block {
@@ -117,18 +112,18 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-bottom-contents {
-  background-color: #f6f7f9;
-  font-size: 12px;
+  background-color: transparent;
+  font-size: 1rem;
   line-height: 1.2;
-  padding: 0.8rem 1rem;
+  padding: 1rem;
 }
 
 .tile-transactions {
-  color: #a3a9b5;
-  font-size: 12px;
+  color: #B0B3B8;
+  font-size: 0.875rem;
   font-weight: 400;
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
   text-align: left;
 }
 
@@ -177,7 +172,7 @@ $tile-body-a-color: #5959d8 !default;
 
 .tile {
   span[data-address-hash] {
-    color: $tile-body-a-color;
+    color: $dark-primary;
   }
 
   a[data-test=token_link] {
@@ -197,7 +192,7 @@ $tile-body-a-color: #5959d8 !default;
 
   .tile-title {
     color: $tile-title-color;
-    font-size: 12px;
+    font-size: 1rem;
 
     &-hash {
       font-weight: 300;
@@ -208,12 +203,11 @@ $tile-body-a-color: #5959d8 !default;
       font-size: 16px;
     }
   }
-  border-radius: 4px;
-  border: 1px solid $border-color;
+  border-radius: 0px;
   color: $text-muted;
   flex-grow: 1;
-  font-size: 12px;
-  line-height: 1.4rem;
+  font-size: 14px;
+  line-height: 1.5rem;
   padding: $tile-padding;
 
   @include generate-tile-block(
@@ -287,10 +281,10 @@ $tile-body-a-color: #5959d8 !default;
   &.tile-type-block {
     max-width: 100%;
     .tile-title {
-      font-weight: 700;
+      font-weight: 400;
       line-height: 1.2;
-      margin-bottom: 12px;
-      padding: 1rem 1rem 0 1rem;
+      padding: 1rem;
+      border-bottom: 1px solid #3A3B3C;
     }
   }
 
