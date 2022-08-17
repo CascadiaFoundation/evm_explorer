@@ -555,9 +555,9 @@ $dark-stakes-banned-background: #3e314c;
 
 	// Form Controlls
 	.form-control {
-		background-color: $dark-light;
-		border-color: $dark-light;
-		color: #fff;
+		background-color: $body-dark;
+		border-color: $body-dark;
+		color: $dark-primary;
 		transition: border-color 0.15s ease-in-out;
 
 		&[readonly] {
@@ -568,9 +568,9 @@ $dark-stakes-banned-background: #3e314c;
 			color: $labels-dark;
 		}
 		&:focus {
-			background-color: $dark-light;
-			border-color: $dark-primary;
-			color: #fff;
+			background-color: $body-dark;
+			border-color: $dark-secondary;
+			color: $dark-primary;
 		}
 
 		&:-webkit-autofill,
