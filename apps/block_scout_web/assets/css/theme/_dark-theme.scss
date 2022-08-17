@@ -325,8 +325,8 @@ $dark-stakes-banned-background: #3e314c;
 
 	// table
 	.stakes-table-head, .stakes-table-th {
-		background-color: $dark-light;
-		color: $labels-dark;
+		background-color: #3A3B3C;
+		color: $dark-secondary;
 	}
 
 	.stakes-table-body {
@@ -338,7 +338,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.stakes-td {
-		border-bottom-color: darken($labels-dark, 30);
+		border-bottom-color: #3A3B3C;
 	}
 
 	.stakes-tr-banned {
