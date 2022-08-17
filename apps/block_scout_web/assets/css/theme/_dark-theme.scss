@@ -382,7 +382,7 @@ $dark-stakes-banned-background: #3e314c;
 			}
 
 			.i-tooltip-info {
-				fill: #fff;
+				fill: $dark-primary;
 			}
 		}
 	}
@@ -391,22 +391,25 @@ $dark-stakes-banned-background: #3e314c;
 	.api-anchors-list {
 		background-color: $dark-light;
 	}
-	.api-doc-list-item {
-		border-bottom-color: darken($labels-dark, 30);
-	}
 	.card-subtitle,
 	.api-anchors-list-item-title,
 	.api-doc-list-item-title {
-		color: #fff;
+		color: $dark-primary;
+	}
+	.api-doc-list-item-header {
+		background-color: #3A3B3C;
+	}
+	.api-doc-list-item-code-block {
+		background-color: $body-dark;
 	}
 	.api-text-monospace {
 		color: $dark-primary;
 	}
 	.api-text-monospace-background {
-		background-color: rgba($dark-primary, .15);
+		background-color: $body-dark;
 	}
 	.badge.badge-neutral {
-		background-color: rgba($dark-primary, .15);
+		background-color: $body-dark;
 		color: $dark-primary;
 	}
 
@@ -706,9 +709,11 @@ $dark-stakes-banned-background: #3e314c;
 	// API docs dropdown content
 	.api-doc-parameters-list-item-description,
 	.api-doc-parameters-list-item-title,
-	.api-doc-parameters-list-title,
-	.api-doc-list-item-controls-view-more {
+	.api-doc-parameters-list-title {
 		color: #fff;
+	}
+	.api-doc-list-item-controls-view-more {
+		color: $dark-secondary;
 	}
 
 	.api-doc-parameters-list {

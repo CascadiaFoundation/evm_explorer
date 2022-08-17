@@ -54,113 +54,119 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   align-self: center;
   color: #333;
   font-size: 14px;
-  font-weight: 300;
-  line-height: 1.2;
+  font-weight: 400;
+  line-height: 1.5rem;
   margin: 0;
 }
 
 .api-anchors-list-item-value {
   align-self: center;
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
 .api-text-title {
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.5rem;
   margin-left: 20px;
 }
 .api-doc-list-item {
-  border-bottom: 1px solid $base-border-color;
-  padding: $card-vertical-padding $card-horizontal-padding;
-
   &:last-child {
     border-bottom: none;
   }
-}
 
-.api-doc-list-item-contents {
-  display: flex;
-  justify-content: space-between;
-
-  @include media-breakpoint-down(sm) {
-    flex-direction: column;
-  }
-}
-
-.api-doc-list-item-title {
-  color: $api-doc-list-item-title-color;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 15px;
-}
-
-.api-doc-list-item-query {
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  word-break: break-all;
-  word-wrap: break-word;
-
-  > strong {
-    font-weight: 700;
-  }
-}
-
-.api-doc-list-item-text {
-  color: #aaa;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.api-doc-list-item-description {
-  width: 100%
-}
-
-.api-doc-list-item-controls {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin-left: 50px;
-
-  @include media-breakpoint-down(sm) {
-    flex-direction: row;
+  &-header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-left: 0;
-    padding-top: 25px;
+    padding: 0.5rem 1rem;
   }
-}
 
-.api-doc-list-item-controls-badges {
-  display: flex;
-  justify-content: flex-end;
+  &-contents {
+    padding: 1rem;
+  }
 
-  .api-badge {
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
+  &-title {
+    color: $api-doc-list-item-title-color;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  
+  &-query {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding: 0 0.5rem;
+  
+    > strong {
+      font-weight: 700;
+    }
+  }
+  
+  &-text {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+  }
+  
+  &-code-block {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  &-description {
+    width: 100%;
+  }
+  
+  &-controls {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 50px;
+  
+    @include media-breakpoint-down(sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 0;
+      padding-top: 25px;
+    }
+  }
+  
+  &-controls-badges {
+    display: flex;
+    justify-content: flex-end;
+  
+    .api-badge {
+      margin-right: 8px;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  &-controls-view-more {
+    align-self: flex-end;
+    color: $api-doc-list-item-view-more-color;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto;
+    white-space: nowrap;
+  
+    .fa {
+      margin-left: 5px;
     }
   }
 }
 
-.api-doc-list-item-controls-view-more {
-  align-self: flex-end;
-  color: $api-doc-list-item-view-more-color;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: auto;
-  white-space: nowrap;
-
-  .fa {
-    margin-left: 5px;
-  }
-}
 
 [aria-expanded="false"] {
   .api-doc-list-item-controls-view-more-open {
