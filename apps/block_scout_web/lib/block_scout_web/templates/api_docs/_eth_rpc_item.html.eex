@@ -27,6 +27,7 @@
       </span>
       <div class="api-doc-list-item-code-block api-text-monospace">
         <pre
+          class="m-0"
           data-json='<%= @info.example %>'
         ></pre>
       </div>
@@ -37,8 +38,10 @@
     class="collapse multi-collapse api-doc-parameters-container"
     id="<%= @action %>"
   >
-    <h3 class="card-title margin-bottom-md">
-      <%= gettext "Parameters" %>
+    <div class="d-flex align-items-center justify-content-between pb-3">
+      <h3 class="m-0">
+        <%= gettext "Parameters" %>
+      </h3>
       <button
         class="btn-full-primary float-right"
         data-action="<%= @action %>"
@@ -47,15 +50,15 @@
         role="button"
       ><%= gettext "Try it out" %></button>
       <button
-        class="collapse btn-line float-right"
+        class="collapse btn-full-primary float-right"
         data-action="<%= @action %>"
         data-module="eth"
         data-selector='<%= "eth-#{@action}-btn-try-api-cancel" %>'
         role="button"
       ><%= gettext "Cancel" %></button>
-    </h3>
+    </div>
     <!-- Parameters description list -->
-    <div class="api-doc-parameters-list">
+    <div class="api-doc-parameters-list pb-1">
       <div class="row d-none d-md-flex">
         <h4 class="col-2 api-doc-parameters-list-title"><%= gettext "Name" %></h4>
         <h3 class="col-10 api-doc-parameters-list-title"><%= gettext "Description" %></h3>
@@ -74,9 +77,9 @@
             </h5>
           </div>
           <div class="col-sm-8 col-md-10">
-            <p  class="api-doc-parameters-list-item-description"><%= param.description %></p>
+            <p class="api-doc-parameters-list-item-description"><%= param.description %></p>
             <input
-              class="collapse form-control border-rounded <%= if param.required && !param.default, do: "form-control-danger is-invalid" %>"
+              class="collapse form-control mt-2 <%= if param.required && !param.default, do: "form-control-danger is-invalid" %>"
               data-parameter-type='<%= param.type %>'
               data-required='<%= if param.required, do: "true", else: "false" %>'
               data-selector='<%= "eth-#{@action}-try-api-ui" %>'
@@ -89,9 +92,9 @@
 
       <!-- Buttons for Other / Extra -->
       <div class="row">
-        <div class="offset-sm-4 offset-md-2 col-10">
+        <div class="offset-sm-4 offset-md-2 col-10 mt-1 mb-3">
           <button
-            class="collapse button button-primary"
+            class="collapse btn-full-primary"
             data-action="<%= @action %>"
             data-module="eth"
             data-selector='<%= "eth-#{@action}-try-api-ui" %>'
@@ -99,7 +102,7 @@
             role="button"
           ><%= gettext "Execute" %></button>
           <button
-            class="collapse button button-secondary"
+            class="collapse btn-full-secondary"
             data-action="<%= @action %>"
             data-module="eth"
             data-selector='<%= "eth-#{@action}-btn-try-api-clear" %>'
@@ -110,19 +113,19 @@
 
       <!-- CURL / Request URL / Server Response -->
       <div
-        class="tile text-dark mt-5 collapse"
+        class="text-dark collapse"
         data-selector='<%= "eth-#{@action}-try-api-ui-result" %>'
       >
-        <div class="mb-3">
-          <h5 class="api-doc-parameters-list-item-title"><%= gettext "Curl" %></h5>
-          <div class="tile tile-muted p-1">
+        <div class="mb-1">
+          <h5 class="api-doc-parameters-list-item-title mb-2"><%= gettext "Curl" %></h5>
+          <div class="api-doc-list-item-query api-text-monospace api-text-monospace-background">
             <pre
-              class="m-2"
+              class="m-0"
               data-selector='<%= "eth-#{@action}-curl" %>'
             ></pre>
           </div>
         </div>
-        <h5 class="api-doc-parameters-list-item-title"><%= gettext "Server Response" %></h5>
+        <h5 class="api-doc-parameters-list-item-title mb-3"><%= gettext "Server Response" %></h5>
         <div class="row">
           <h4 class="col-2 api-doc-parameters-list-title"><%= gettext "Code" %></h4>
           <h4 class="col-10 api-doc-parameters-list-title"><%= gettext "Details" %></h4>
@@ -130,48 +133,49 @@
         <div class="row">
           <div
             class="col-2 pr-0 pr-md-2 col-md-2"
-          ><strong data-selector='<%= "eth-#{@action}-server-response-code" %>'></strong></div>
+          >
+            <h5 class="api-doc-parameters-list-item-title" data-selector='<%= "eth-#{@action}-server-response-code" %>'></h5>
+          </div>
           <div class="col-10 col-md-10">
-            <p class="api-doc-parameters-list-item-description"><%= gettext "Response Body" %></p>
-              <div class="tile tile-muted p-1 card-server-response-body">
-                <pre
-                  class="m-2"
-                  data-selector='<%= "eth-#{@action}-server-response-body" %>'
-                ></pre>
-            </div>
+            <p class="api-doc-parameters-list-item-description mb-2"><%= gettext "Response Body" %></p>
+            <p class="api-doc-parameters-list-item-description mb-3"
+              data-selector='<%= "eth-#{@action}-server-response-body" %>'
+            ></p>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Responses -->
-    <h3 class="card-title margin-bottom-md"><%= gettext "Responses" %></h3>
+    <h3 class="my-3"><%= gettext "Responses" %></h3>
     <div class="row api-doc-parameters-list-item mb-0">
       <h4 class="col-2 api-doc-parameters-list-title"><%= gettext "Code" %></h4>
       <h5 class="col-10 api-doc-parameters-list-title"><%= gettext "Description" %></h5>
     </div>
     <div class="row api-doc-parameters-list-item">
-      <div class="col-2 pr-0 pr-md-2"><strong>200</strong></div>
+      <div class="col-2">
+        <h5 class="api-doc-parameters-list-item-title">200</h5>
+      </div>
       <div class="col-10">
-        <div class="tile tile-muted p-1 mb-3">
-          <pre class="m-2"><strong>successful operation</strong></pre>
-        </div>
+        <p class="api-doc-parameters-list-item-description mb-3">
+          Successful operation
+        </p>
         <!-- Tabs -->
         <ul
           class="nav nav-pills mb-3"
           role="tablist"
         >
           <li class="nav-item">
-            <a class="nav-link api-doc-tab active"><%= gettext "Example Value" %></a>
+            <a class="api-doc-tab active"><%= gettext "Example Value" %></a>
           </li>
         </ul>
         <!-- Tab Content -->
         <div class="tab-content">
           <!-- Example Value Tab -->
           <div class="tab-pane fade show active">
-            <div class="tile tile-muted p-1">
+            <div class="api-doc-list-item-code-block api-text-monospace">
               <pre
-                class="m-2"
+                class="m-0"
                 data-json='<%= @info.result %>'
               ></pre>
             </div>

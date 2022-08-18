@@ -29,11 +29,10 @@
 }
 
 .api-doc-tab {
-  padding-bottom: 5px;
+  padding: 0px;
   color: $primary !important;
   background-color: transparent !important;
-}
-
-.api-doc-tab.active {
-  border-bottom: 1px solid $primary;
+  border-radius: 0px;
+  font-size: 14px;
+  line-height: 1.5rem;
 }
