@@ -1,6 +1,22 @@
-<div
-  class="api-doc-list-item"
->
+<div class="api-doc-list-item">
+  <div class="api-doc-list-item-header">
+    <div class="d-flex align-items-center">
+      <div class="bs-label mr-2"><%= gettext "GET" %></div>
+      <div class="bs-label"><%= gettext "POST" %></div>
+      <h3 class="api-doc-list-item-title pl-2 m-0"><%= @action.name %></h3>
+    </div>
+    <div
+      aria-controls="<%= action_tile_id(@module_name, @action.name) %>"
+      aria-expanded="false"
+      data-toggle="collapse"
+      href="#<%= action_tile_id(@module_name, @action.name) %>"
+    >
+      <span class="api-doc-list-item-controls-view-more">
+        <span class="api-doc-list-item-controls-view-more-open">[ View Details ]</span>
+        <span class="api-doc-list-item-controls-view-more-close">[ Hide Details ]</span>
+      </span>
+    </div>
+  </div>
   <div
     aria-controls="<%= action_tile_id(@module_name, @action.name) %>"
     aria-expanded="false"
@@ -9,19 +25,8 @@
     href="#<%= action_tile_id(@module_name, @action.name) %>"
   >
     <div data-selector="stop-propagation" class="api-doc-list-item-description">
-      <h3 class="api-doc-list-item-title"><%= raw @action.description %></h3>
-      <p class="api-doc-list-item-query api-text-monospace api-text-monospace-background"><%= raw query_params(@module_name, @action) %></p>
-      <p class="api-doc-list-item-text"><%= @action.name %></p>
-    </div>
-    <div class="api-doc-list-item-controls">
-      <div class="api-doc-list-item-controls-badges">
-        <span class="badge badge-success api-badge"><%= gettext "GET" %></span>
-        <span class="badge badge-neutral api-badge"><%= gettext "POST" %></span>
-      </div>
-      <span class="api-doc-list-item-controls-view-more">
-        <span class="api-doc-list-item-controls-view-more-open">More Details <span class="fa fa-chevron-down"></span></span>
-        <span class="api-doc-list-item-controls-view-more-close">Hide Details <span class="fa fa-chevron-up"></span></span>
-      </span>
+      <p class="text-secondary mb-3"><%= raw @action.description %></p>
+      <p class="api-doc-list-item-query api-text-monospace api-text-monospace-background m-0"><%= raw query_params(@module_name, @action) %></p>
     </div>
   </div>
   <!-- Parameters -->
@@ -39,7 +44,7 @@
         role="button"
       ><%= gettext "Try it out" %></button>
       <button
-        class="collapse btn-line float-right"
+        class="collapse btn-full-primary float-right"
         data-action="<%= @action.name %>"
         data-module="<%= @module_name %>"
         data-selector='<%= "#{@module_name}-#{@action.name}-btn-try-api-cancel" %>'
@@ -88,7 +93,7 @@
               data-selector='<%= "#{@module_name}-#{@action.name}-try-api-ui" %>'
               data-required="true"
               type="text"
-              class="collapse form-control form-control-danger is-invalid"
+              class="collapse form-control form-control-danger is-invalid mt-2"
               placeholder="<%= input_placeholder(required_param) %>"
               data-parameter-key="<%= required_param.key %>"
             />
@@ -106,7 +111,7 @@
         <div class="col-sm-8 col-md-10">
           <p class="api-doc-parameters-list-item-description"><%= optional_param.description %></p>
           <input
-            class="collapse form-control"
+            class="collapse form-control mt-2"
             data-parameter-key="<%= optional_param.key %>"
             data-selector='<%= "#{@module_name}-#{@action.name}-try-api-ui" %>'
             placeholder="<%= input_placeholder(optional_param) %>"
@@ -117,9 +122,9 @@
       <% end %>
       <!-- Buttons for Other / Extra -->
       <div class="row">
-        <div class="col-sm-2 offset-sm-4 col-md-2 offset-md-2">
+        <div class="col-sm-2 offset-sm-4 col-md-2 offset-md-2 mt-1 mb-3">
           <button
-            class="collapse button button-primary w-100"
+            class="collapse btn-full-primary justify-content-center align-items-center"
             data-action="<%= @action.name %>"
             data-module="<%= @module_name %>"
             data-selector='<%= "#{@module_name}-#{@action.name}-try-api-ui" %>'
@@ -129,7 +134,7 @@
         </div>
         <div class="col-sm-2 col-md-2 mt-2 mt-md-0">
           <button
-            class="collapse button button-secondary w-100"
+            class="collapse btn-full-secondary"
             data-action="<%= @action.name %>"
             data-module="<%= @module_name %>"
             data-selector='<%= "#{@module_name}-#{@action.name}-btn-try-api-clear" %>'
@@ -182,24 +187,24 @@
       </div>
     </div>
     <!-- Responses -->
-    <h3 class="card-title margin-bottom-md"><%= gettext "Responses" %></h3>
+    <h3 class="my-3"><%= gettext "Responses" %></h3>
     <div class="row api-doc-parameters-list-item mb-0">
       <h4 class="col-2 api-doc-parameters-list-title"><%= gettext "Code" %></h4>
       <h5 class="col-10 api-doc-parameters-list-title"><%= gettext "Description" %></h5>
     </div>
     <%= for {response, index} <- Enum.with_index(@action.responses) do %>
     <div class="row api-doc-parameters-list-item">
-      <div class="col-2 pr-0 pr-md-2"><strong><%= response.code %></strong></div>
+      <div class="col-2 pr-0 pr-md-2"><%= response.code %></div>
       <div class="col-10">
-        <div class="tile tile-muted p-1 mb-3">
-          <pre class="m-2"><strong><%= response.description %></strong></pre>
-        </div>
+        <p class="api-doc-parameters-list-item-description text-capitalize mb-3">
+          <%= response.description %>
+        </p>
         <!-- Tabs -->
         <ul
           class="nav nav-pills mb-3"
           role="tablist"
         >
-          <li class="nav-item">
+          <li class="nav-item mr-2">
             <a
               aria-controls='<%= "#{@module_name}-#{@action.name}-example-value" %>'
               aria-selected="true"
@@ -233,9 +238,9 @@
             id='<%= "#{@module_name}-#{@action.name}-example-value" %>'
             role="tabpanel"
           >
-            <div class="tile tile-muted p-1">
+            <div class="api-doc-list-item-code-block api-text-monospace">
               <pre
-                class="m-2"
+                class="m-0"
                 data-json='<%= response.example_value %>'
               ></pre>
             </div>

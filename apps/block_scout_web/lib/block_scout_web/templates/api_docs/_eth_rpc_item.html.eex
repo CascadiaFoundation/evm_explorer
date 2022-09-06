@@ -166,7 +166,7 @@
           role="tablist"
         >
           <li class="nav-item">
-            <a class="api-doc-tab active"><%= gettext "Example Value" %></a>
+            <a class="nav-link api-doc-tab active"><%= gettext "Example Value" %></a>
           </li>
         </ul>
         <!-- Tab Content -->

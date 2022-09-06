@@ -1,11 +1,11 @@
-<div class="tile tile-muted text-dark p-3">
-    <h3><strong><%= @model.name %></strong> {</h3>
+<div class="api-doc-list-item-code-block api-text-monospace">
+    <span><%= @model.name %> {</span>
       <%= for {key, details} <- @model.fields do %>
-        <dl class="row">
-          <dt class="col-md-3">
+        <dl class="row pl-4">
+          <dt class="col-md-2">
             <%= key %>
           </dt>
-          <dd class="col-md-9">
+          <dd class="col-md-10">
             <span>
               <%= if details[:type] != "model", do: details.type %>
               <%= if details[:definition] do %>
@@ -18,19 +18,19 @@
             </span>
             <%= if details[:type] == "model" do %>
               <span>
-                <strong><%= details.model.name %></strong>
+                <%= details.model.name %>
               </span>
             <% end %>
             <%= if details[:type] == "array" do %>
               <div>
-                [<strong><%= details.array_type.name %></strong>]
+                [<%= details.array_type.name %>]
               </div>
             <% end %>
             <%= if details[:enum] do %>
               <div>enum: <%= details.enum %></div>
               <dl class="row mt-2">
-                <dt class="col-md-2"> <strong>enum</strong></th>
-                <dt class="col-md-10"><strong>interpretation</strong></th>
+                <dt class="col-md-2">enum</th>
+                <dt class="col-md-10">interpretation</th>
               </dl>
               <%= for {enum, interpretation} <- details[:enum_interpretation] do %>
                 <dl class="row">
@@ -53,7 +53,7 @@
 
         </dl>
       <% end %>
-      <h3>}</h3>
+      <span>}</span>
     </div> <!-- /table-responsive -->
 
 <%= if @model.fields[:result][:type] == "array" do %>
