@@ -4,6 +4,9 @@
     background: #18191A;
     color: $dark-secondary;
     border-radius: 0px;
+    &:hover {
+        text-decoration: none;        
+    }
     &.large {
         font-size: 14px;
     }
