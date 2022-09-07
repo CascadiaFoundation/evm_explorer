@@ -70,7 +70,7 @@ $dark-stakes-banned-background: #3e314c;
 		border-color: $dark-bg;
 		color: #fff;
 		&::placeholder {
-			color: $labels-dark;
+			color: $dark-secondary;
 		}
 	}
 	.navbar.navbar-primary .navbar-toggler .navbar-toggler-icon {
@@ -382,7 +382,7 @@ $dark-stakes-banned-background: #3e314c;
 			}
 
 			.i-tooltip-info {
-				fill: #fff;
+				fill: $dark-primary;
 			}
 		}
 	}
@@ -391,22 +391,25 @@ $dark-stakes-banned-background: #3e314c;
 	.api-anchors-list {
 		background-color: $dark-light;
 	}
-	.api-doc-list-item {
-		border-bottom-color: darken($labels-dark, 30);
-	}
 	.card-subtitle,
 	.api-anchors-list-item-title,
 	.api-doc-list-item-title {
-		color: #fff;
+		color: $dark-primary;
+	}
+	.api-doc-list-item-header {
+		background-color: #3A3B3C;
+	}
+	.api-doc-list-item-code-block {
+		background-color: $body-dark;
 	}
 	.api-text-monospace {
 		color: $dark-primary;
 	}
 	.api-text-monospace-background {
-		background-color: rgba($dark-primary, .15);
+		background-color: $body-dark;
 	}
 	.badge.badge-neutral {
-		background-color: rgba($dark-primary, .15);
+		background-color: $body-dark;
 		color: $dark-primary;
 	}
 
@@ -417,10 +420,14 @@ $dark-stakes-banned-background: #3e314c;
 
 	//tooltips
 	.tooltip .arrow:before {
-		border-top-color: $dark-primary;
-    	border-bottom-color: $dark-primary;
+		border-top-color: transparent;
+    border-bottom-color: transparent;
+		border-right-color: $dark-primary;
 	}
-	.tooltip > .tooltip-inner {background-color: $dark-primary;}
+	.tooltip > .tooltip-inner {
+		background-color: $dark-primary;
+		color: $body-dark;
+	}
 
 	.tooltip-pale-color.bs-tooltip-top .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="top"] .arrow::before {
@@ -500,7 +507,7 @@ $dark-stakes-banned-background: #3e314c;
 
 	// code
 	pre {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	// info allert
@@ -512,7 +519,7 @@ $dark-stakes-banned-background: #3e314c;
 
 	// dark text
 	.text-dark {
-		color: #fff !important;
+		color: $dark-primary !important;
 	}
 
 	// Contract Verification
@@ -565,7 +572,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 
 		&::placeholder {
-			color: $labels-dark;
+			color: $dark-secondary;
 		}
 		&:focus {
 			background-color: $body-dark;
@@ -705,22 +712,24 @@ $dark-stakes-banned-background: #3e314c;
 
 	// API docs dropdown content
 	.api-doc-parameters-list-item-description,
-	.api-doc-parameters-list-item-title,
-	.api-doc-parameters-list-title,
-	.api-doc-list-item-controls-view-more {
-		color: #fff;
+	.api-doc-parameters-list-item-title {
+		color: $dark-primary;
+	}
+	.api-doc-list-item-controls-view-more,
+	.api-doc-parameters-list-title {
+		color: $dark-secondary;
 	}
 
 	.api-doc-parameters-list {
-		border-bottom-color: darken($labels-dark, 30);
+		border-bottom-color: #3A3B3C;
 	}
 	.api-doc-parameters-container {
-		border-top-color: darken($labels-dark, 30);
+		border-top-color: #3A3B3C;
 	}
 	.api-doc-tab {
-		color: $dark-primary !important;
+		color: $dark-secondary !important;
 		&.active {
-			border-bottom-color: $dark-primary;
+			color: $dark-primary !important;
 		}
 	}
 
@@ -956,17 +965,32 @@ $dark-stakes-banned-background: #3e314c;
 	.btn-full-primary, .button-primary {
 		background: $dark-primary;
 		border-color: $dark-primary;
-		color: #fff;
+		color: $body-dark;
 		&:hover {
 			background: darken($dark-primary, 6);
 			border-color: darken($dark-primary, 6);
-			color: #fff;
+			color: $body-dark;
 		}
 
 		&[disabled] {
 			&,
 			&:hover {
-			  background-color: $dark-primary;
+			  background-color: $dark-secondary;
+			  border-color: $dark-secondary;
+			}
+		}
+	}
+
+	.btn-full-secondary {
+		border:1px solid $dark-primary;
+		color: $dark-primary;
+		&:hover {
+			border-color: darken($dark-primary, 6);
+		}
+
+		&[disabled] {
+			&,
+			&:hover {
 			  border-color: $dark-primary;
 			}
 		}

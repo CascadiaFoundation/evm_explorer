@@ -26,8 +26,7 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   grid-auto-flow: column;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
-  padding: 30px;
-  row-gap: 25px;
+  row-gap: 16px;
 
   @include media-breakpoint-down(md) {
     grid-template-columns: 1fr 1fr;
@@ -53,114 +52,120 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
 .api-anchors-list-item-title {
   align-self: center;
   color: #333;
-  font-size: 14px;
-  font-weight: 300;
-  line-height: 1.2;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
   margin: 0;
 }
 
 .api-anchors-list-item-value {
   align-self: center;
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
 .api-text-title {
-  font-size: 12px;
-  line-height: 1.2;
+  font-size: 14px;
+  line-height: 1.5rem;
   margin-left: 20px;
 }
 .api-doc-list-item {
-  border-bottom: 1px solid $base-border-color;
-  padding: $card-vertical-padding $card-horizontal-padding;
-
   &:last-child {
     border-bottom: none;
   }
-}
 
-.api-doc-list-item-contents {
-  display: flex;
-  justify-content: space-between;
-
-  @include media-breakpoint-down(sm) {
-    flex-direction: column;
-  }
-}
-
-.api-doc-list-item-title {
-  color: $api-doc-list-item-title-color;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 15px;
-}
-
-.api-doc-list-item-query {
-  display: inline-block;
-  font-size: 12px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-  word-break: break-all;
-  word-wrap: break-word;
-
-  > strong {
-    font-weight: 700;
-  }
-}
-
-.api-doc-list-item-text {
-  color: #aaa;
-  font-size: 14px;
-  font-weight: normal;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.api-doc-list-item-description {
-  width: 100%
-}
-
-.api-doc-list-item-controls {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-  margin-left: 50px;
-
-  @include media-breakpoint-down(sm) {
-    flex-direction: row;
+  &-header {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
-    margin-left: 0;
-    padding-top: 25px;
+    padding: 0.5rem 1rem;
   }
-}
 
-.api-doc-list-item-controls-badges {
-  display: flex;
-  justify-content: flex-end;
+  &-contents {
+    padding: 1rem;
+  }
 
-  .api-badge {
-    margin-right: 8px;
-
-    &:last-child {
-      margin-right: 0;
+  &-title {
+    color: $api-doc-list-item-title-color;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5rem;
+  }
+  
+  &-query {
+    display: inline-block;
+    font-size: 14px;
+    line-height: 1.5rem;
+    word-break: break-all;
+    word-wrap: break-word;
+    padding: 0 0.5rem;
+  
+    > strong {
+      font-weight: 700;
+    }
+  }
+  
+  &-text {
+    color: #aaa;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    margin: 0;
+  }
+  
+  &-code-block {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5rem;
+    padding: 0.5rem;
+  }
+  
+  &-description {
+    width: 100%;
+  }
+  
+  &-controls {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin-left: 50px;
+  
+    @include media-breakpoint-down(sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      margin-left: 0;
+      padding-top: 25px;
+    }
+  }
+  
+  &-controls-badges {
+    display: flex;
+    justify-content: flex-end;
+  
+    .api-badge {
+      margin-right: 8px;
+  
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+  
+  &-controls-view-more {
+    align-self: flex-end;
+    color: $api-doc-list-item-view-more-color;
+    cursor: pointer;
+    font-size: 14px;
+    margin-top: auto;
+    white-space: nowrap;
+  
+    .fa {
+      margin-left: 5px;
     }
   }
 }
 
-.api-doc-list-item-controls-view-more {
-  align-self: flex-end;
-  color: $api-doc-list-item-view-more-color;
-  cursor: pointer;
-  font-size: 14px;
-  margin-top: auto;
-  white-space: nowrap;
-
-  .fa {
-    margin-left: 5px;
-  }
-}
 
 [aria-expanded="false"] {
   .api-doc-list-item-controls-view-more-open {
@@ -181,28 +186,24 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
 }
 
 .api-doc-parameters-container {
-  border-top: 1px solid $base-border-color;
-  margin-top: 20px;
-  padding-top: $card-vertical-padding;
+  border-top: 1px solid #3A3B3C;
+  padding: 1rem;
 }
 
 .api-doc-parameters-list {
-  border-bottom: 1px solid $base-border-color;
-  margin-bottom: $card-vertical-padding;
-  padding-bottom: math.div($card-vertical-padding, 2);
+  border-bottom: 1px solid #3A3B3C;
 }
 
 .api-doc-parameters-list-title {
   color: #333;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0 0 15px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5rem;
   white-space: nowrap;
 }
 
 .api-doc-parameters-list-item {
-  margin-bottom: 15px;
+  margin-bottom: 8px;
 
   &:last-child {
     margin-bottom: 0;
@@ -223,30 +224,26 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
 
 .api-doc-parameters-list-item-title {
   color: #333;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.2;
-  margin: 0 0 8px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.5rem;
+  margin: 0;
 }
 
 .api-doc-parameters-list-item-subtitle {
   color: #aaa;
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 1.2;
+  line-height: 1.5rem;
   margin: 0;
 }
 
 .api-doc-parameters-list-item-description {
   color: #333;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
-  line-height: 1.2;
-  margin: 0 0 8px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
+  line-height: 1.5rem;
+  margin: 0;
 
   strong {
     font-weight: 700;

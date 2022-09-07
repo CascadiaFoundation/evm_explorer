@@ -2336,18 +2336,15 @@ defmodule BlockScoutWeb.Etherscan do
     name: "verify",
     description: """
     Verify a contract with its source code and contract creation information.
-    <br/>
-    <br/>
-    <p class="api-doc-list-item-text">curl POST example:</p>
-    <br/>
+    <p class="api-doc-list-item-text mb-2">curl POST example:</p>
     <div class='tab-content'>
     <div class='tab-pane fade show active'>
-    <div class="tile tile-muted p-1">
+    <div class="api-doc-list-item-code-block api-text-monospace">
     <div class="m-2">
     curl -d '{"addressHash":"0xc63BB6555C90846afACaC08A0F0Aa5caFCB382a1","compilerVersion":"v0.5.4+commit.9549d8ff",
     "contractSourceCode":"pragma solidity ^0.5.4; \ncontract Test {\n}","name":"Test","optimization":false}'
     -H "Content-Type: application/json" -X POST  "https://blockscout.com/poa/sokol/api?module=contract&action=verify"
-    </pre>
+    </div>
     </div>
     </div>
     </div>
@@ -2481,13 +2478,10 @@ defmodule BlockScoutWeb.Etherscan do
     Verify a contract through <a href="https://sourcify.dev">Sourcify</a>.<br/>
     a) if smart-contract already verified on Sourcify, it will automatically fetch the data from the <a href="https://repo.sourcify.dev">repo</a><br/>
     b) otherwise you have to upload source files and JSON metadata file(s).
-    <br/>
-    <br/>
-    <p class="api-doc-list-item-text">POST body example:</p>
-    <br/>
+    <p class="api-doc-list-item-text mb-2">POST body example:</p>
     <div class='tab-content'>
     <div class='tab-pane fade show active'>
-    <div class="tile tile-muted p-1">
+    <div class="api-doc-list-item-code-block api-text-monospace">
     <div class="m-2">
     --6e1e4c11657c62dc1e4349d024de9e28<br/>
     Content-Disposition: form-data; name="addressHash"<br/>
@@ -2507,7 +2501,7 @@ defmodule BlockScoutWeb.Etherscan do
     ...JSON metadata...<br/>
     <br/>
     --6e1e4c11657c62dc1e4349d024de9e28--<br/>
-    </pre>
+    </div>
     </div>
     </div>
     </div>
@@ -2547,20 +2541,17 @@ defmodule BlockScoutWeb.Etherscan do
     name: "verify_vyper_contract",
     description: """
     Verify a vyper contract with its source code and contract creation information.
-    <br/>
-    <br/>
-    <p class="api-doc-list-item-text">curl POST example:</p>
-    <br/>
+    <p class="api-doc-list-item-text mb-2">curl POST example:</p>
     <div class='tab-content'>
     <div class='tab-pane fade show active'>
-    <div class="tile tile-muted p-1">
+    <div class="api-doc-list-item-code-block api-text-monospace">
     <div class="m-2">
     curl --location --request POST 'http://localhost:4000/api?module=contract&action=verify_vyper_contract' \
     --form 'contractSourceCode="SOURCE_CODE"' \
     --form 'name="Vyper_contract"' \
     --form 'addressHash="0xE60B1B8bD493569a3E945be50A6c89d29a560Fa1"' \
     --form 'compilerVersion="v0.2.12"'
-    </pre>
+    </div>
     </div>
     </div>
     </div>
@@ -2618,8 +2609,6 @@ defmodule BlockScoutWeb.Etherscan do
     name: "verifysourcecode",
     description: """
     Verify a contract with Standard input JSON file. Its interface the same as <a href="https://docs.etherscan.io/tutorials/verifying-contracts-programmatically">Etherscan</a>'s API endpoint
-    <br/>
-    <br/>
     """,
     required_params: [
       %{
