@@ -424,10 +424,25 @@ $dark-stakes-banned-background: #3e314c;
 
 	//tooltips
 	.tooltip .arrow:before {
-		border-top-color: transparent;
-    border-bottom-color: transparent;
-		border-right-color: $dark-primary;
+		border-color: transparent;
 	}
+	
+	.bs-tooltip-top .arrow::before, .bs-tooltip-auto[x-placement^=top] .arrow::before {
+		border-top-color: $dark-primary !important;
+	}
+
+	.bs-tooltip-right .arrow::before, .bs-tooltip-auto[x-placement^=right] .arrow::before {
+		border-right-color: $dark-primary !important;
+	}
+
+	.bs-tooltip-bottom .arrow::before, .bs-tooltip-auto[x-placement^=bottom] .arrow::before {
+		border-bottom-color: $dark-primary !important;
+	}
+
+	.bs-tooltip-left .arrow::before, .bs-tooltip-auto[x-placement^=left] .arrow::before {
+		border-left-color: $dark-primary !important;
+	}
+
 	.tooltip > .tooltip-inner {
 		background-color: $dark-primary;
 		color: $body-dark;
@@ -435,23 +450,23 @@ $dark-stakes-banned-background: #3e314c;
 
 	.tooltip-pale-color.bs-tooltip-top .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="top"] .arrow::before {
-		border-top-color: rgba(#fff, 0.5) !important;
+		border-top-color: $dark-primary !important;
 	}
 		
 	.tooltip-pale-color.bs-tooltip-right .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="right"] .arrow::before {
-		border-right-color: rgba(#fff, 0.5) !important;
+		border-right-color: $dark-primary !important;
 	}
 		
 	.tooltip-pale-color.bs-tooltip-bottom .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="bottom"] .arrow::before {
-		border-bottom-color: rgba(#fff, 0.5) !important;
+		border-bottom-color: $dark-primary !important;
 	}
 		
 		
 	.tooltip-pale-color.bs-tooltip-left .arrow::before,
 	.tooltip-pale-color.bs-tooltip-auto[x-placement^="left"] .arrow::before {
-		border-left-color: rgba(#fff, 0.5) !important;
+		border-left-color: $dark-primary !important;
 	}
 
 	//coin dropdown
