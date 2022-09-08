@@ -12,25 +12,22 @@
       <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
     </div>
 
-    <div class="card">
-      <div data-async-listing="<%= @current_path %>" class="card-body">
-        <%= render BlockScoutWeb.CommonComponentsView, "_channel_disconnected_message.html", text: gettext("Connection Lost, click to load newer validations") %>
-        <div data-empty-response-message class="tile tile-muted text-center" style="display: none;">
-          <span><%= gettext "There are no blocks validated by this address." %></span>
-        </div>
-        <button data-error-message class="alert alert-danger col-12 text-left" style="display: none;">
-          <span class="alert-link">
-            <%= gettext "Something went wrong, click to reload." %>
-          </span>
-        </button>
-        <div data-items data-selector="validations-list">
-          <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
-        </div>
+    <div data-async-listing="<%= @current_path %>" class="mb-3">
+      <%= render BlockScoutWeb.CommonComponentsView, "_channel_disconnected_message.html", text: gettext("Connection Lost, click to load newer validations") %>
+      <div data-empty-response-message class="tile tile-muted text-center" style="display: none;">
+        <span><%= gettext "There are no blocks validated by this address." %></span>
+      </div>
+      <button data-error-message class="alert alert-danger col-12 text-left" style="display: none;">
+        <span class="alert-link">
+          <%= gettext "Something went wrong, click to reload." %>
+        </span>
+      </button>
+      <div data-items data-selector="validations-list">
+        <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
+      </div>
+    </div>
 
-        <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
-
-      </div> <!-- Card Body -->
-    </div> <!-- Card -->
+    <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
     <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/address-validations.js") %>"></script>
   <section>
 </section>

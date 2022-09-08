@@ -25,22 +25,24 @@
       <p class="m-0"><%= gettext "Balances" %></p>
       <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
     </div>
+    <div data-async-listing="<%= @current_path %>" class="mb-3">
+      <div data-error-message class="alert alert-danger col-12 text-left" style="display: none; padding: 0.75rem 0rem; cursor: pointer;">
+        <span href="#" class="alert alert-danger"><%= gettext("Something went wrong, click to reload.") %></span>
+      </div>
 
-    <div data-error-message class="alert alert-danger col-12 text-left" style="display: none; padding: 0.75rem 0rem; cursor: pointer;">
-      <span href="#" class="alert alert-danger"><%= gettext("Something went wrong, click to reload.") %></span>
-    </div>
+      <div data-empty-response-message style="display: none;">
+        <div class="tile tile-muted text-center" data-selector="empty-coin-balances-list">
+          <%= gettext "There is no coin history for this address." %>
+        </div>
+      </div>
 
-    <div data-empty-response-message style="display: none;">
-      <div class="tile tile-muted text-center" data-selector="empty-coin-balances-list">
-        <%= gettext "There is no coin history for this address." %>
+      <div data-selector="coin-balances-list" data-items>
+        <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
       </div>
     </div>
 
-    <div data-selector="coin-balances-list" data-items>
-      <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
-    </div>
-
     <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
+
     <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/address-coin-balances.js") %>"></script>
   </section>
 </section>

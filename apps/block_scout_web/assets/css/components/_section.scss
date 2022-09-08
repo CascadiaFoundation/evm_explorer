@@ -10,11 +10,12 @@
     }
   }
   .content {
-    padding: 1rem 0;
+    padding: 1rem 0 0;
   }
   .footer {
     display: flex;
     justify-content: flex-end;
+    margin-top: 1rem;
     padding-top: 1rem;
     border-top: 1px solid #3A3B3C;
     background-color: transparent !important;

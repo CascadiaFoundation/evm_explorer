@@ -281,20 +281,19 @@ $dark-stakes-banned-background: #3e314c;
 
 	// pagination
 	.pagination-container .pagination .page-link {
-		color: $labels-dark;
-		border-color: $dark-light;
-		background-color: $dark-light;
+		color: $dark-secondary;
+		border-color: #3A3B3C;
+		background-color: transparent;
 		&:not(.no-hover):hover {
-			color: #fff;
-			background-color: $dark-primary;
+			color: $dark-primary;
+			border-color: $dark-primary;
+			background-color: transparent;
 			path {
-				fill: #fff;
+				fill: $dark-primary;
 			}
 		}
 		&[disabled] {
-			color: $labels-dark;
-			border-color: $dark-light;
-			background-color: $dark-light;
+			color: $dark-secondary;
 		}
 	}
 
@@ -319,9 +318,13 @@ $dark-stakes-banned-background: #3e314c;
 		background-color: $dark-light !important;
 	}
 	.btn-dropdown-line {
-		background-color: $dark-light;
-		border-color: $dark-light;
-		color: $labels-dark;
+		background-color: transparent;
+		border-color: #3A3B3C;
+		color: $dark-secondary;
+		&:hover {
+			border-color: $dark-primary;
+			color: $dark-primary;			
+		}
 	}
 
 	// table
