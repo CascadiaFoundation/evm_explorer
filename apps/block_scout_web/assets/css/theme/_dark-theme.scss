@@ -156,18 +156,19 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card-tabs {
-		border-bottom-color: darken($labels-dark, 30);
+		border-bottom-color: #3A3B3C;
 	}
 
 	.card-tab {
+		color: $dark-secondary;
 		background-color: transparent;
+		border-bottom: 1px solid transparent;
 		&:hover:not(.active) {
-			background-color: rgba($dark-primary, .15);
 			color: $dark-primary;
 		}
 		&.active {
-			background-color: $dark-primary-alternate;
-			color: #fff;
+			border-bottom-color: $dark-primary;
+			color: $dark-primary;
 		}
 	}
 

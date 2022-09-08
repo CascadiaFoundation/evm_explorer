@@ -4,14 +4,17 @@
   <%= render BlockScoutWeb.AddressView, "overview.html", address: @address, is_proxy: is_proxy, conn: @conn, exchange_rate: @exchange_rate, coin_balance_status: @coin_balance_status, counters_path: @counters_path %>
 
   <section data-page="blocks-validated">
+
+    <%= render BlockScoutWeb.AddressView, "_tabs.html", address: @address, is_proxy: is_proxy, conn: @conn %>
+
+    <div class="d-flex justify-content-between align-items-center py-3">
+      <p class="m-0"><%=gettext("Blocks Validated")%></p>
+      <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
+    </div>
+
     <div class="card">
-      <%= render BlockScoutWeb.AddressView, "_tabs.html", address: @address, is_proxy: is_proxy, conn: @conn %>
       <div data-async-listing="<%= @current_path %>" class="card-body">
         <%= render BlockScoutWeb.CommonComponentsView, "_channel_disconnected_message.html", text: gettext("Connection Lost, click to load newer validations") %>
-        <h2 class="card-title"><%=gettext("Blocks Validated")%></h2>
-
-        <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
-
         <div data-empty-response-message class="tile tile-muted text-center" style="display: none;">
           <span><%= gettext "There are no blocks validated by this address." %></span>
         </div>
