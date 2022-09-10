@@ -71,14 +71,16 @@ $pagination-page-link-color-active: #B0B3B8 !default;
 
     .page-link {
       @include pagination-container-base($pagination-page-link-background, $pagination-page-link-color);
+      box-sizing: border-box;
       align-items: center;
       border-radius: 0px;
       display: flex;
       font-size: 14px;
-      font-weight: 400;
-      height: 100%;
+      line-height: 1.5rem;
+      font-weight: normal;
       margin: 0;
-      padding: 0 8px;
+      min-height: 30px;
+      padding: 2px 8px;
       position: relative;
       user-select: none;
       text-align: center;

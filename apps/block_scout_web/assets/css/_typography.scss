@@ -116,6 +116,10 @@ textarea.form-control {
   &-secondary {
     color: #B0B3B8 !important;
   }
+
+  &-small {
+    font-size: 14px;
+  }
 }
 
 [data-transaction-status="Success"],

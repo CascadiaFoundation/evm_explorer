@@ -86,6 +86,7 @@
   line-height: 1.5rem;
   justify-content: center;
   outline: none;
+  min-height: 30px;
   padding: 2px 8px;
   text-decoration: none;
   transition: $transition-cont;
@@ -130,17 +131,18 @@
   -webkit-appearance: none !important;
   align-items: center;
   background-color: $bg-color;
-  border-radius: 2px;
+  border-radius: 0px;
   border: 1px solid $text-color;
   color: $text-color;
   cursor: pointer;
   display: flex;
   font-size: $font-size;
-  font-weight: 600;
-  height: 36px;
+  font-weight: normal;
   justify-content: center;
   outline: none;
-  padding: 0 15px;
+  min-height: 30px;
+  line-height: 1.5rem;
+  padding: 2px 8px;
   text-decoration: none;
   transition: $transition-cont;
   white-space: nowrap;
@@ -185,7 +187,7 @@
 @mixin square-icon-button($color, $dimensions) {
   align-items: center;
   border: 1px solid $color;
-  border-radius: 2px;
+  border-radius: 0px;
   cursor: pointer;
   display: flex;
   height: $dimensions;
@@ -215,7 +217,7 @@
 
 @mixin square-icon-button-inline($color, $dimensions) {
   border: 1px solid $color;
-  border-radius: 2px;
+  border-radius: 0px;
   cursor: pointer;
   display: inline;
   height: $dimensions;
