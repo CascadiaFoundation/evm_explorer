@@ -61,7 +61,6 @@ a {
   &:hover,
   &:focus {
     color: darken($common-link-color, 20%);
-    text-decoration: underline;
   }
 
   .bg-primary &:hover,

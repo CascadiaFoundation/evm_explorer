@@ -35,6 +35,10 @@ $dark-stakes-banned-background: #3e314c;
 .dark-theme-applied {
 	color: $dark-primary;
 
+	a.text-secondary:hover, a.text-secondary:focus {
+		color: $dark-primary !important;
+	}
+
 	// navbar
 	.navbar.navbar-primary {
 		background-color: $dark-light-bg;
@@ -48,13 +52,14 @@ $dark-stakes-banned-background: #3e314c;
 		filter: brightness(0) invert(1);
 	}
 	.navbar.navbar-primary .navbar-nav .nav-link {
-		color: $labels-dark;
+		color: $dark-secondary;
 		.nav-link-icon {
 			svg path {
-				fill: $labels-dark;
+				fill: $dark-secondary;
 			}
 		}
 		&.active, &:hover {
+			color: $dark-primary;
 			.nav-link-icon {
 				svg path {
 					fill: $dark-primary;
@@ -1129,7 +1134,7 @@ $dark-stakes-banned-background: #3e314c;
 .dark-theme-applied .dropdown-item.active:not(.header), .dark-theme-applied .dropdown-item:not(.header):hover, .dark-theme-applied .dropdown-item:not(.header):focus {
     background-image: none;
     width: 100%;
-    background-color: #3f426c !important;
+    background-color: #2f3031 !important;
 }
 
 @media (max-width: 991.98px) {

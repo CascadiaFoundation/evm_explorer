@@ -54,18 +54,18 @@
   <body>
     <script defer data-cfasync="false">
       function applyDarkMode() {
-        if (localStorage.getItem("current-color-mode") === "dark") {
+        //if (localStorage.getItem("current-color-mode") === "dark") {
           document.body.className += " " + "dark-theme-applied";
-          document.body.style.backgroundColor = "#1c1d31";
-        }
+          document.body.style.backgroundColor = "#18191A";
+        //}
       }
       window.onload = applyDarkMode()
     </script>
     <script defer data-cfasync="false">
-      if (localStorage.getItem("current-color-mode") === "dark") {
-        if (document.getElementById("top-navbar")) {
-          document.getElementById("top-navbar").style.backgroundColor = "#282945";
-        }
+      if (document.getElementById("top-navbar")) {
+        document.getElementById("top-navbar").style.backgroundColor = "#242526";
+      }
+      /*if (localStorage.getItem("current-color-mode") === "dark") {
         if (document.getElementById("navbar-logo")) {
           document.getElementById("navbar-logo").style.filter = "brightness(0) invert(1)";
         }
@@ -73,7 +73,7 @@
         if (modeChanger) {
           modeChanger.className += " " + "dark-mode-changer--dark";
         }
-      }
+      }*/
     </script>
     <script defer data-cfasync="false">
       if (localStorage.getItem("current-color-mode") === "dark") {
@@ -225,7 +225,7 @@
       <% end %>
       <%= render BlockScoutWeb.LayoutView, "_topnav.html", assigns %>
 
-      <main class="js-ad-dependant-pt pt-5">
+      <main class="js-ad-dependant-pt pt-3">
         <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
         <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
         <%= @inner_content %>
