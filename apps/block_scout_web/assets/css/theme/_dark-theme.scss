@@ -85,18 +85,15 @@ $dark-stakes-banned-background: #3e314c;
 	// footer
 	.footer {
 		background: $dark-light-bg;
-		color: $labels-dark;
+		color: $dark-primary;
 	}
 	.footer-social-icon,
 	.footer-link {
-		color: $labels-dark;
+		color: $dark-secondary;
 	}
 	.footer-social-icon:hover,
 	.footer-link:hover {
-		color: #fff;
-	}
-	.footer-list ul li::before {
-		background-color: $dark-secondary;
+		color: $dark-primary;
 	}
 
 	// hero stats
@@ -1119,6 +1116,11 @@ $dark-stakes-banned-background: #3e314c;
 			background-color: $dark-primary !important;
 		}
 	}
+
+	.footer-info-text {
+		color: $dark-secondary;
+	}
+
 }
 
 .navbar-dark .navbar-toggler {
