@@ -1181,9 +1181,13 @@ $dark-stakes-banned-background: #3e314c;
 
 .dark-theme-applied .i-tooltip-2:hover{
 	color: $labels-dark;
-}
+}	
 
 .dark-theme-applied .btn-no-border-link-to-tems {
-	border-color: $dark-primary;
-	color: $dark-primary;
+	border-color: transparent;
+	color: $dark-secondary;
+	&:hover {
+		color: $dark-primary;
+		background-color: #18191A;
+	}
 }
