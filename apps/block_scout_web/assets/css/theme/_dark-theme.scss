@@ -282,6 +282,10 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 
+	.btn-copy-icon.btn-copy-icon-small.btn-copy-icon-no-borders:hover path {
+    fill: $dark-primary;
+	}
+
 	// pagination
 	.pagination-container .pagination .page-link {
 		color: $dark-secondary;

@@ -138,8 +138,11 @@
                     <% _ -> %>
                       <% hex = BlockScoutWeb.TransactionView.get_pure_transaction_revert_reason(@transaction) %>
                       <% utf8 = BlockScoutWeb.TransactionView.decoded_revert_reason(@transaction) %>
-                      <div class="tile tile-muted">
-                          <pre class="pre-scrollable pre-scrollable-shorty pre-wrap mb-0"><code>Raw:<%= raw("\t") %><%= hex %><%= raw("\n") %>UTF-8:<%= raw("\t") %><%= utf8 %></code></pre>
+                      <div class="bs-label muted w-100 py-2">
+                        <div class="flex align-items-center justify-content-between">
+                          <pre class="mb-0"><code>Raw:<%= raw("\t") %><%= hex %><%= raw("\n") %>UTF-8:<%= raw("\t") %><%= utf8 %></code></pre>
+                          
+                        </div>
                       </div>
                   <% end %>
                 </dd>
@@ -462,34 +465,54 @@
                             <%= gettext("UTF-8") %>
                           </a>
                         </div>
-                      </div>
-                      <div class="btn-copy-tx-raw-input-container">
-                        <!-- Copy Hex input -->
-                        <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
-                            id: "tx-raw-input",
-                            additional_classes: ["btn-copy-icon-small", "btn-copy-icon-no-borders", "btn-copy-icon-ml-0", "btn-copy-tx-raw-input", "tx-raw-input"],
-                            clipboard_text: @transaction.input,
-                            aria_label: gettext("Copy Value"),
-                            title: gettext("Copy Txn Hex Input") %>
-                        <!-- Copy UTF-8 input  -->
-                        <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
-                            additional_classes: ["btn-copy-icon-small", "btn-copy-icon-no-borders", "btn-copy-icon-ml-0", "btn-copy-tx-raw-input", "tx-utf8-input"],
-                            clipboard_text: @transaction.input.bytes,
-                            aria_label: gettext("Copy Value"),
-                            title: gettext("Copy Txn UTF-8 Input"),
-                            style: "display: none;" %>
-                      </div>
+                      </div>                      
                     </div>
                     <!-- Textarea -->
                     <div class="tx-raw-input">
-                      <div class="tile tile-muted">
-                        <pre class="pre-scrollable pre-scrollable-shorty pre-wrap mb-0"><code><%= @transaction.input %></code></pre>
+                      <div class="bs-label muted w-100 py-2">
+                        <div class="d-flex align-items-center justify-content-between">
+                          <pre class="mb-0"><code><%= @transaction.input %></code></pre>
+                          <div class="btn-copy-tx-raw-input-container">
+                            <!-- Copy Hex input -->
+                            <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
+                                id: "tx-raw-input",
+                                additional_classes: ["btn-copy-icon-small", "btn-copy-icon-no-borders", "btn-copy-icon-ml-0", "btn-copy-tx-raw-input", "tx-raw-input"],
+                                clipboard_text: @transaction.input,
+                                aria_label: gettext("Copy Value"),
+                                title: gettext("Copy Txn Hex Input") %>
+                            <!-- Copy UTF-8 input  -->
+                            <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
+                                additional_classes: ["btn-copy-icon-small", "btn-copy-icon-no-borders", "btn-copy-icon-ml-0", "btn-copy-tx-raw-input", "tx-utf8-input"],
+                                clipboard_text: @transaction.input.bytes,
+                                aria_label: gettext("Copy Value"),
+                                title: gettext("Copy Txn UTF-8 Input"),
+                                style: "display: none;" %>
+                          </div>
+                        </div>
                       </div>
                     </div>
                     <!-- Textfield -->
                     <div class="tx-utf8-input" style="display: none;">
-                      <div class="tile tile-muted">
-                        <pre class="pre-scrollable pre-scrollable-shorty pre-wrap mb-0"><code><%= @transaction.input.bytes %></code></pre>
+                      <div class="bs-label muted w-100 py-2">
+                        <div class="flex align-items-center justify-content-between">
+                          <pre class="mb-0"><code><%= @transaction.input.bytes %></code></pre>
+                          <div class="btn-copy-tx-raw-input-container">
+                            <!-- Copy Hex input -->
+                            <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
+                                id: "tx-raw-input",
+                                additional_classes: ["btn-copy-icon-small", "btn-copy-icon-no-borders", "btn-copy-icon-ml-0", "btn-copy-tx-raw-input", "tx-raw-input"],
+                                clipboard_text: @transaction.input,
+                                aria_label: gettext("Copy Value"),
+                                title: gettext("Copy Txn Hex Input") %>
+                            <!-- Copy UTF-8 input  -->
+                            <%= render BlockScoutWeb.CommonComponentsView, "_btn_copy.html",
+                                additional_classes: ["btn-copy-icon-small", "btn-copy-icon-no-borders", "btn-copy-icon-ml-0", "btn-copy-tx-raw-input", "tx-utf8-input"],
+                                clipboard_text: @transaction.input.bytes,
+                                aria_label: gettext("Copy Value"),
+                                title: gettext("Copy Txn UTF-8 Input"),
+                                style: "display: none;" %>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </dd>
@@ -505,7 +528,7 @@
   <%= render BlockScoutWeb.Advertisement.BannersAdView, "_banner_728.html", conn: @conn %>
 
   <%= unless skip_decoding?(@transaction) do %>
-    <div class="row">
+    <div class="row mt-4">
       <div class="col-md-12">
         <%= render BlockScoutWeb.TransactionView, "_decoded_input.html", Map.put(assigns, :decoded_input_data, decoded_input_data) %>
       </div>
