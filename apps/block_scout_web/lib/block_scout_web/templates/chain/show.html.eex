@@ -61,33 +61,39 @@
                 </div>
                 <% end %>
               <% end %>
-              <%= render BlockScoutWeb.ChainView, "gas_price_oracle_legend_item.html", gas_price: @gas_price %>
-              <%= if Map.has_key?(@chart_config, :transactions) do %>
 
-                <% transaction_chart_config = @chart_config.transactions%>
-                <%= if Enum.member?(transaction_chart_config, :transactions_per_day) do %>
-                <div class="dashboard-banner-chart-legend-item tx-per-day">
-                    <span class="dashboard-banner-chart-legend-label">
-                        <%= gettext "Daily Transactions" %>
-                    </span>
-                    <span class="dashboard-banner-chart-legend-value" data-selector="tx_per_day">
-                        <% num_of_transactions = BlockScoutWeb.Cldr.Number.to_string!(Enum.at(@transaction_stats, 0).number_of_transactions, format: "#,###") %>
-                        <%= num_of_transactions %>
-                        <% gas_used = Enum.at(@transaction_stats, 0).gas_used %>
-                        <%= if gas_used && gas_used > 0 do %>
-                          <span
-                            data-toggle="tooltip"
-                            data-placement="top"
-                            data-html="true"
-                            data-template="<div class='tooltip tooltip-inversed-color tooltip-gas-usage' role='tooltip'><div class='arrow'></div><div class='tooltip-inner'></div></div>"
-                            title="<div class='custom-tooltip-header'>Gas used</div><div class='custom-tooltip-description'><b><%= BlockScoutWeb.Cldr.Number.to_string!(gas_used, format: "#,###") %><b></div>">
-                            <i style="color: #ffffff;" class="fa fa-info-circle ml-1"></i>
-                          </span>
-                        <% end %>
-                    </span>
-                </div>
+              <%# begin: Modification %>
+              <div class="d-none gy-2">
+              
+                <%= render BlockScoutWeb.ChainView, "gas_price_oracle_legend_item.html", gas_price: @gas_price %>
+                <%= if Map.has_key?(@chart_config, :transactions) do %>
+
+                  <% transaction_chart_config = @chart_config.transactions%>
+                  <%= if Enum.member?(transaction_chart_config, :transactions_per_day) do %>
+                    <div class="dashboard-banner-chart-legend-item tx-per-day">
+                      <span class="dashboard-banner-chart-legend-label">
+                          <%= gettext "Daily Transactions" %>
+                      </span>
+                      <span class="dashboard-banner-chart-legend-value" data-selector="tx_per_day">
+                          <% num_of_transactions = BlockScoutWeb.Cldr.Number.to_string!(Enum.at(@transaction_stats, 0).number_of_transactions, format: "#,###") %>
+                          <%= num_of_transactions %>
+                          <% gas_used = Enum.at(@transaction_stats, 0).gas_used %>
+                          <%= if gas_used && gas_used > 0 do %>
+                            <span
+                              data-toggle="tooltip"
+                              data-placement="top"
+                              data-html="true"
+                              data-template="<div class='tooltip tooltip-inversed-color tooltip-gas-usage' role='tooltip'><div class='arrow'></div><div class='tooltip-inner'></div></div>"
+                              title="<div class='custom-tooltip-header'>Gas used</div><div class='custom-tooltip-description'><b><%= BlockScoutWeb.Cldr.Number.to_string!(gas_used, format: "#,###") %><b></div>">
+                              <i style="color: #ffffff;" class="fa fa-info-circle ml-1"></i>
+                            </span>
+                          <% end %>
+                      </span>
+                    </div>
+                  <% end %>
                 <% end %>
-              <% end %>
+              </div>
+              <%# end: Modification %>
             </div>
           </div>
         </div>
