@@ -73,7 +73,7 @@ $dark-stakes-banned-background: #3e314c;
 	.navbar.navbar-primary .form-control {
 		background-color: $dark-bg;
 		border-color: $dark-bg;
-		color: #fff;
+		color: $dark-primary;
 		&::placeholder {
 			color: $dark-secondary;
 		}
@@ -151,7 +151,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.address-detail-hash-title {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.card-tabs {
@@ -193,7 +193,7 @@ $dark-stakes-banned-background: #3e314c;
 			border-left-color: $dark-light;
 		}
 		.tile-title {
-			color: #fff;
+			color: $dark-primary;
 		}
 		.tile-transaction-type-block {
 			background-color: transparent;
@@ -203,10 +203,10 @@ $dark-stakes-banned-background: #3e314c;
 		background-color: transparent;
 	}
 	a.tile-title {
-		color: #fff !important;
+		color: $dark-primary !important;
 	}
 	.tile.tile-type-block .tile-transaction-type-block a {
-		color: #fff;
+		color: $dark-primary;
 	}
 	.fade-up-blocks-chain .tile-type-block-animation {
 		background-color: $dark-light;
@@ -243,7 +243,7 @@ $dark-stakes-banned-background: #3e314c;
 		border-bottom-color: $dark-primary;
 	}
 	.tile .progress {
-		background-color: rgba(#fff, .2);
+		background-color: rgba($dark-primary, .2);
 	}
 	.tile .progress .progress-bar {
 		background-color: $dark-primary;
@@ -261,7 +261,7 @@ $dark-stakes-banned-background: #3e314c;
 		&:hover {
 			border-color: $dark-primary;
 			background-color: $dark-primary;
-			color: #fff;
+			color: $dark-primary;
 		}
 	}
 
@@ -310,9 +310,9 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.dropdown-item {
-		color: #fff;
+		color: $dark-primary;
 		&:hover {
-			background-color: rgba(#fff, .1);
+			background-color: #18191A;
 		}
 	}
 	.dropdown-item.active {
@@ -484,13 +484,13 @@ $dark-stakes-banned-background: #3e314c;
 	.token-balance-dropdown .dropdown-search-field {
 		background-color: $dark-light;
 		border-color: $dark-light;
-		color: #fff;
+		color: $dark-primary;
 		&::placeholder {
 			color: $labels-dark;
 		}
 	}
 	.token-balance-dropdown[aria-labelledby="dropdown-tokens"] .dropdown-items .dropdown-item:hover {
-		color: #fff !important;
+		color: $dark-primary !important;
 	}
 	.dropdown-header {
 		color: $labels-dark;
@@ -508,7 +508,7 @@ $dark-stakes-banned-background: #3e314c;
 	.logs-search-input, .logs-search-btn, .logs-search-btn-cancel {
 		background-color: $dark-light;
 		border-color: $dark-light;
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.logs-search-btn {
@@ -518,7 +518,7 @@ $dark-stakes-banned-background: #3e314c;
 	.logs-search-btn {
 		&:hover {
 			background-color: $dark-primary;
-			color: #fff;
+			color: $dark-primary;
 		}
 	}
 
@@ -557,7 +557,7 @@ $dark-stakes-banned-background: #3e314c;
 		color: $labels-dark;
 	}
 	.smart-contract-title {
-		color: #fff;
+		color: $dark-primary;
 	}
 	.smart-contract-form-group-inner-wrapper > label {
 		color: $labels-dark;
@@ -567,10 +567,10 @@ $dark-stakes-banned-background: #3e314c;
 		.btn-no-border {
 			background-color: $dark-light;
 			border-color: $dark-light;
-			color: #fff;
+			color: $dark-primary;
 			&:hover {
 				background-color: $dark-primary;
-				color: #fff;
+				color: $dark-primary;
 			}
 		}
 	}
@@ -606,8 +606,8 @@ $dark-stakes-banned-background: #3e314c;
 		&:-webkit-autofill,
 		&:-webkit-autofill:hover,
 		&:-webkit-autofill:focus {
-			caret-color: #fff;
-			-webkit-text-fill-color: #fff;
+			caret-color: $dark-primary;
+			-webkit-text-fill-color: $dark-primary;
 			-webkit-box-shadow: 0 0 0px 1000px $dark-light inset;
 		}
 	}
@@ -636,7 +636,7 @@ $dark-stakes-banned-background: #3e314c;
 		background: $dark-primary;
 	}
 	.radio-big .radio-text {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.check input[type="checkbox"]:checked + .check-icon::before {
@@ -659,7 +659,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 		.exp-content {
 			h3 {
-				color: #fff;
+				color: $dark-primary;
 			}
 			div {
 				color: $labels-dark;
@@ -674,17 +674,17 @@ $dark-stakes-banned-background: #3e314c;
 		&:hover {
 			background-color: $dark-primary;
 			svg path {
-				fill: #fff;
+				fill: $dark-primary;
 			}
 		}
 	}
 	.verify-other-explorers-elem {
 		&:hover {
 			text-decoration: none;
-			color: #fff;
+			color: $dark-primary;
 			.exp-content {
 				h3, div {
-					color: #fff;
+					color: $dark-primary;
 				}
 			}
 		}
@@ -692,7 +692,7 @@ $dark-stakes-banned-background: #3e314c;
 
 	#explorersModal {
 		.modal-title {
-			color: #fff;
+			color: $dark-primary;
 		}
 
 		.text-muted {
@@ -718,18 +718,18 @@ $dark-stakes-banned-background: #3e314c;
 
 		.verify-other-explorers-cell {
 			.exp-logo {
-				color: #fff;
+				color: $dark-primary;
 			}
 		}
 
 		.close {
-			color: #fff;
+			color: $dark-primary;
 		}
 	}
 
 	#qrModal {
 		.close {
-			color: #fff;
+			color: $dark-primary;
 		}
 	}
 
@@ -764,13 +764,13 @@ $dark-stakes-banned-background: #3e314c;
 		&:hover {
 			background-color: $dark-primary;
 			border-color: $dark-primary;
-			color: #fff;
+			color: $dark-primary;
 		}
 	}
 
 	// Decoded data
 	.table.thead-light.table-bordered {
-		color: #fff !important;
+		color: $dark-primary !important;
 	}
 	.table-bordered, .table-bordered td, .table-bordered th {
 		border-color: darken($labels-dark, 30);
@@ -779,13 +779,13 @@ $dark-stakes-banned-background: #3e314c;
 		border-top-color: darken($labels-dark, 30);
 	}
 	.btn-copy-ico svg path {
-		fill: #fff;
+		fill: $dark-primary;
 	}
 
 	// pre
 	.pre-scrollable.line-numbers, .hljs {
 		background: $dark-light;
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.hljs-comment {
@@ -811,13 +811,13 @@ $dark-stakes-banned-background: #3e314c;
 
 	// 'text dark' label
 	.text-dark {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	// validator info
 	#validatorModal {
 		.modal-title {
-			color: #fff;
+			color: $dark-primary;
 		}
 
 		.text-muted {
@@ -842,13 +842,13 @@ $dark-stakes-banned-background: #3e314c;
 		}
 
 		.close {
-			color: #fff;
+			color: $dark-primary;
 		}
 	}
 
 	.modal-status {
 		.modal-status-title {
-			color: #fff;
+			color: $dark-primary;
 		}
 
 		.modal-status-button-wrapper .btn-line {
@@ -864,7 +864,7 @@ $dark-stakes-banned-background: #3e314c;
 
 	.modal-dialog {
 		.modal-title {
-			color: #fff;
+			color: $dark-primary;
 		}
 		.modal-content {
 			background-color: $dark-light-bg;
@@ -877,7 +877,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 
 		.modal-bottom-disclaimer-graphic svg {
-			fill: #fff;
+			fill: $dark-primary;
 		}
 
 		.modal-header {
@@ -886,7 +886,7 @@ $dark-stakes-banned-background: #3e314c;
 			}
 
 			.modal-validator-info-item-value {
-				color: #fff;
+				color: $dark-primary;
 			}
 		}
 
@@ -894,7 +894,7 @@ $dark-stakes-banned-background: #3e314c;
 			background-color: $dark-light;
 
 			.modal-validator-info-item-value {
-				color: #fff;
+				color: $dark-primary;
 			}
 		}
 	}
@@ -911,7 +911,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.stakes-progress-data-progress, .stakes-progress-info-value {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.stakes-empty-content-text {
@@ -935,7 +935,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.progress-from-to-value {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.progress-from-to-background {
@@ -1020,7 +1020,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.logo-text {
-		color: #fff;
+		color: $dark-primary;
 	}
 
 	.bs-label.omni {
@@ -1035,7 +1035,7 @@ $dark-stakes-banned-background: #3e314c;
 	.dropdown-item {
 		.external-link-icon {
 			path {
-			  fill: #fff;
+			  fill: $dark-primary;
 			}
 		}
 
@@ -1045,7 +1045,7 @@ $dark-stakes-banned-background: #3e314c;
 			&:focus {
 			  .external-link-icon {
 				path {
-				  fill: #fff;
+				  fill: $dark-primary;
 				}
 			  }
 			}
@@ -1055,7 +1055,7 @@ $dark-stakes-banned-background: #3e314c;
 	.tooltip-inversed-color {
 		.tooltip-inner {
 			background-color: $btn-line-color !important;
-			color: #fff !important;
+			color: $dark-primary !important;
 		}
 	}
 
@@ -1093,22 +1093,22 @@ $dark-stakes-banned-background: #3e314c;
 	}
 	.stakes-btn-close-alert {
 		path {
-			fill: #fff;
+			fill: $dark-primary;
 		  }
 	}
 	.main-search-autocomplete {
 		background-color: $dark-bg !important;
-		color: #fff !important;
+		color: $dark-primary !important;
 	}
 	.autocomplete-category {
-		color: #fff !important;
+		color: $dark-primary !important;
 	}
 	ul[id^='autoComplete_list_'] {
 		background-color: $dark-light-bg !important;
 	}
 	li[id^='autoComplete_result_'] {
 		background-color: $dark-light-bg !important;
-		color: #fff !important;
+		color: $dark-primary !important;
 
 		&:hover {
 			background-color: $dark-primary !important;
@@ -1137,13 +1137,13 @@ $dark-stakes-banned-background: #3e314c;
 
 .dark-theme-applied .dropdown-item {
 	background-color: $dark-light !important;
-	color: #fff !important;
+	color: $dark-primary !important;
 }
 
 .dark-theme-applied .dropdown-item.active:not(.header), .dark-theme-applied .dropdown-item:not(.header):hover, .dark-theme-applied .dropdown-item:not(.header):focus {
     background-image: none;
     width: 100%;
-    background-color: #2f3031 !important;
+    background-color: #18191A !important;
 }
 
 @media (max-width: 991.98px) {
