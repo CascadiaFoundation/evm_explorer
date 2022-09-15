@@ -4,14 +4,12 @@
   <div class="row tile-body" data-selector="token-transfers-toggle" data-test="chain_transaction">
     <!-- Color Block -->
     <div class="tile-transaction-type-block col-md-2 d-flex flex-row flex-md-column">
-      <div>
         <%= if error_in_internal_tx do %>
           <%= render BlockScoutWeb.CommonComponentsView, "_i_tooltip_2.html", text: gettext("Error in internal transactions"), additional_classes: ["color-inherit"] %>
         <% end %>
-        <span class="tile-label" data-test="transaction_type">
+        <span class="tile-label mb-2" data-test="transaction_type">
           <%= transaction_display_type(@transaction) %>
         </span>
-      </div>
       <span class="tile-status-label ml-2 ml-md-0" data-test="transaction_status">
         <%= if status_class(@transaction) == "tile-status--pending" do %>
           <div class="loading-spinner-small">
