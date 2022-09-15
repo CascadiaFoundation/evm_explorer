@@ -13,6 +13,10 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
   padding: 0;
   width: 100%;
 
+  @media (max-width: 991.98px) {
+    box-shadow: none;
+  }
+
   &.right {
     left: auto;
     right: 0;

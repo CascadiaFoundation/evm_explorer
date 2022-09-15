@@ -18,7 +18,7 @@
     <% col_size = if Enum.empty?(other_explorers), do: 3, else: 2 %>
 
     <div class="row">
-      <div class="col-5">
+      <div class="col-md-5 col-12 md-mb-0 mb-4">
         <h2 class="mb-3">Sophon Foundation</h2>
         <p class="footer-info-text">
           <%= gettext("Copyright © 2022 CRO Protocol Labs. All rights reserved.") %><br/>
@@ -26,9 +26,9 @@
         </p>
       </div>
 
-      <div class="col-7 footer-list">
+      <div class="col-12 col-md-7 footer-list">
         <div class="row">
-          <div class="col-3">
+          <div class="col-md-3 col-6">
             <h2 class="mb-3"><%= gettext("Sophon") %></h2>
             <ul>
               <li><a href="<%= issue_link(@conn) %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Submit an Issue") %></a></li>
@@ -40,7 +40,7 @@
               <% end %>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="col-md-3 col-6">
             <h2 class="mb-3"><%= gettext("Ohter Links") %></h2>
             <ul>
               <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Sophon") %></a></li>
@@ -48,14 +48,14 @@
               <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Documentation") %></a></li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="col-md-3 col-6 mt-md-0 mt-3">
             <h2 class="mb-3"><%= gettext("Mainnet") %></h2>
             <ul>
               <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("EVM Explorer") %></a></li>
               <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Native Explorer") %></a></li>
             </ul>
           </div>
-          <div class="col-3">
+          <div class="col-md-3 col-6 mt-md-0 mt-3">
             <h2 class="mb-3"><%= gettext("Testnet") %></h2>
             <ul>
               <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("EVM Explorer Testnet") %></a></li>

@@ -27,9 +27,9 @@ indexer_empty_blocks_sanitizer_batch_size =
 config :indexer, Indexer.Fetcher.EmptyBlocksSanitizer, batch_size: indexer_empty_blocks_sanitizer_batch_size
 
 config :block_scout_web, :footer,
-  chat_link: System.get_env("FOOTER_CHAT_LINK", "https://discord.gg/XmNatGKbPS"),
-  forum_link: System.get_env("FOOTER_FORUM_LINK", "https://forum.poa.network/c/blockscout"),
-  github_link: System.get_env("FOOTER_GITHUB_LINK", "https://github.com/blockscout/blockscout")
+  chat_link: System.get_env("FOOTER_CHAT_LINK", "#"),
+  forum_link: System.get_env("FOOTER_FORUM_LINK", "#"),
+  github_link: System.get_env("FOOTER_GITHUB_LINK", "#")
 
 ######################
 ### BlockScout Web ###
