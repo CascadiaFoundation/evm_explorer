@@ -9,7 +9,7 @@
   <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
   <div class="section">
     <div class="header">
-      <h3><%= gettext "Validated Transactions" %></h3>
+      <h3 class="m-0"><%= gettext "Validated Transactions" %></h3>
       <%= render BlockScoutWeb.CommonComponentsView, "_rap_pagination_container.html", position: "top", showing_limit: if Chain.transactions_available_count() == Chain.limit_showing_transactions(), do: Chain.limit_showing_transactions(), else: nil %>
     </div>
 
