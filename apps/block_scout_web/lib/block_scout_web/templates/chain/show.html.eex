@@ -2,7 +2,7 @@
   <div class="container">
     <h3 class="mb-3">Network Stats</h3>
     <div class="row">
-      <div class="col-5">
+      <div class="col-lg-5 col-12 mb-4 mb-lg-0">
         <div class="card h-100">
           <div class="card-body dashboard-banner-network-graph">
             <!-- Graph -->
@@ -98,9 +98,9 @@
           </div>
         </div>
       </div>
-      <div class="col-7">
+      <div class="col-lg-7 col-12">
         <div class="row">
-          <div class="col-6">
+          <div class="col-md-6 col-12 mb-4 mb-md-0">
             <div class="card">
               <div class="card-body">
                 <%= case @average_block_time do %>
@@ -117,7 +117,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6">
+          <div class="col-md-6 col-sm-12">
             <div class="card">
               <div class="card-body">
                 <span class="dashboard-banner-network-stats-label mb-2">
@@ -142,7 +142,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 mt-4">
+          <div class="col-md-6 col-sm-12 mt-4">
             <div class="card">
               <div class="card-body">
                 <span class="dashboard-banner-network-stats-label mb-2">
@@ -154,7 +154,7 @@
               </div>
             </div>
           </div>
-          <div class="col-6 mt-4">
+          <div class="col-md-6 col-sm-12 mt-4">
             <div class="card">
               <div class="card-body">
                 <span class="dashboard-banner-network-stats-label mb-2">
