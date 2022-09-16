@@ -256,11 +256,11 @@ $dark-stakes-banned-background: #3e314c;
 
 	.btn-line {
 		background-color: transparent;
-		border-color: $dark-primary;
-		color: $dark-primary;
+		border-color: #3A3B3C;
+		color: $dark-secondary;
 		&:hover {
 			border-color: $dark-primary;
-			background-color: $dark-primary;
+			background-color: transparent;
 			color: $dark-primary;
 		}
 	}
@@ -986,20 +986,20 @@ $dark-stakes-banned-background: #3e314c;
 
 	// primary buttons
 	.btn-full-primary, .button-primary {
-		background: $dark-primary;
-		border-color: $dark-primary;
+		background-color: $dark-secondary;
+		border-color: $dark-secondary;
 		color: $body-dark;
 		&:hover {
-			background: darken($dark-primary, 6);
-			border-color: darken($dark-primary, 6);
+			background-color: $dark-primary;
+			border-color: $dark-primary;
 			color: $body-dark;
 		}
 
 		&[disabled] {
 			&,
 			&:hover {
-			  background-color: $dark-secondary;
-			  border-color: $dark-secondary;
+			  background-color: #3A3B3C;
+			  border-color: #3A3B3C;
 			}
 		}
 	}
