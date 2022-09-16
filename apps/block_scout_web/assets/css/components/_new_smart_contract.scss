@@ -14,12 +14,11 @@ $new-smart-contract-center-column-margin-right: 30px;
   background-repeat: repeat-y;
   background-size: #{$new-smart-contract-tooltips-width} 1px;
   box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.15);
-  margin-bottom: 3rem;
-  padding: 50px 0 50px 22px;
+  padding: 24px;
 
   @include media-breakpoint-down(md) {
     background-image: none;
-    padding-right: 22px;
+    padding-right: 16px;
   }
 }
 
@@ -28,12 +27,12 @@ $new-smart-contract-center-column-margin-right: 30px;
   font-size: 18px;
   font-weight: normal;
   line-height: 1.2;
-  margin: 0 0 70px 0;
+  margin: 0 0 24px 0;
   padding: 0;
   text-align: left;
 
   @include media-breakpoint-down(md) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
 
   &.margin-bottom-md {
@@ -121,10 +120,10 @@ $new-smart-contract-center-column-margin-right: 30px;
     color: $smart-contract-form-group-tooltip-color;
     flex-grow: 0;
     flex-shrink: 0;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: normal;
-    line-height: 1.5;
-    padding: 0 30px;
+    line-height: 1.5rem;
+    padding: 0 0 0 1.5rem;
     text-align: left;
     width: #{$new-smart-contract-tooltips-width};
 
@@ -172,8 +171,8 @@ $new-smart-contract-center-column-margin-right: 30px;
   border-top: 1px solid $base-border-color;
   display: flex;
   margin-right: $new-smart-contract-center-column-margin-right + $new-smart-contract-tooltips-width;
-  margin-top: -1px;
-  padding-top: 30px;
+  margin-top: 0px;
+  padding-top: 24px;
   position: relative;
 
   @include media-breakpoint-down(md) {
@@ -193,7 +192,7 @@ $new-smart-contract-center-column-margin-right: 30px;
     }
   }
   .w-118 {
-    width: 117.828px;
+    width: 118px;
   }
 }
 

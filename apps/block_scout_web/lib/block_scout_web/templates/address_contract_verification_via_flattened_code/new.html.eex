@@ -25,7 +25,7 @@
           <div class="smart-contract-form-group-inner-wrapper">
             <%= label :evm_version, :evm_version, gettext("EVM Version") %>
             <div class="center-column">
-              <%= select f, :evm_version, @evm_versions, class: "form-control border-rounded", "aria-describedby": "evm-version-help-block" %>
+              <%= select f, :evm_version, @evm_versions, class: "form-control", "aria-describedby": "evm-version-help-block" %>
             </div>
             <div class="smart-contract-form-group-tooltip">The EVM version the contract is written for. If the bytecode does not match the version, we try to verify using the latest EVM version. <a href="https://forum.poa.network/t/smart-contract-verification-evm-version-details/2318" target="_blank">EVM version details</a>.</div>
           </div>
@@ -57,7 +57,7 @@
           <div class="smart-contract-form-group-inner-wrapper">
             <%= label f, :name, gettext("Optimization runs") %>
             <div class="center-column">
-              <%= text_input f, :optimization_runs, class: "form-control border-rounded", "aria-describedby": "optimization-runs-help-block", "data-test": "optimization-runs" %>
+              <%= text_input f, :optimization_runs, class: "form-control", "aria-describedby": "optimization-runs-help-block", "data-test": "optimization-runs" %>
             </div>
             <div class="smart-contract-form-group-tooltip"></div>
           </div>
@@ -67,7 +67,7 @@
           <div class="smart-contract-form-group-inner-wrapper">
             <%= label f, :contract_source_code, gettext("Enter the Solidity Contract Code") %>
             <div class="center-column">
-              <%= textarea f, :contract_source_code, class: "form-control border-rounded monospace", rows: 3, "aria-describedby": "contract-source-code-help-block" %>
+              <%= textarea f, :contract_source_code, class: "form-control monospace", rows: 3, "aria-describedby": "contract-source-code-help-block" %>
               <%= error_tag f, :contract_source_code, id: "contract-source-code-help-block", class: "text-danger form-error", "data-test": "contract-source-code-error" %>
             </div>
             <div class="smart-contract-form-group-tooltip">We recommend using flattened code. This is necessary if your code utilizes a library or inherits dependencies. Use the <a href="https://github.com/poanetwork/solidity-flattener" target="_blank">POA solidity flattener or the <a href="https://www.npmjs.com/package/truffle-flattener" target="_blank">truffle flattener</a>.</div>
@@ -143,7 +143,7 @@
           <%=
             link(
               gettext("Cancel"),
-              class: "btn-no-border",
+              class: "btn-line",
               to: address_contract_path(@conn, :index, @address_hash)
               )
           %>

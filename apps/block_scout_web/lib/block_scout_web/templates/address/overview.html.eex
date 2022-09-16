@@ -9,7 +9,7 @@
     <div class="header">
       <div class="d-flex align-items-end">
         <h3 class="m-0 pr-2"><%= address_title(@address) %> <%= gettext "Details" %></h3>
-        <span data-test="address_detail_hash" class="text-secondary text-small">(<%= @address %>)</span>
+        <span data-test="address_detail_hash" class="text-secondary text-small d-none d-md-block">(<%= @address %>)</span>
       </div>
       <!-- buttons -->
       <span class="overview-title-buttons float-right">
