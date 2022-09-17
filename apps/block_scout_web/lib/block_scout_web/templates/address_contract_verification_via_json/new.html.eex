@@ -39,7 +39,7 @@
         <%=
           link(
             gettext("Cancel"),
-            class: "btn-no-border",
+            class: "btn-line",
             to: address_contract_path(@conn, :index, @address_hash)
             )
         %>

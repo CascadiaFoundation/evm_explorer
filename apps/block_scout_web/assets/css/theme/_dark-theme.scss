@@ -147,7 +147,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.card-header {
-		border-bottom-color: darken($labels-dark, 30);
+		border-bottom-color: #3A3B3C;
 	}
 
 	.address-detail-hash-title {
@@ -256,11 +256,11 @@ $dark-stakes-banned-background: #3e314c;
 
 	.btn-line {
 		background-color: transparent;
-		border-color: $dark-primary;
-		color: $dark-primary;
+		border-color: #3A3B3C;
+		color: $dark-secondary;
 		&:hover {
 			border-color: $dark-primary;
-			background-color: $dark-primary;
+			background-color: transparent;
 			color: $dark-primary;
 		}
 	}
@@ -312,7 +312,7 @@ $dark-stakes-banned-background: #3e314c;
 	.dropdown-item {
 		color: $dark-primary;
 		&:hover {
-			background-color: #18191A;
+			background-color: $body-dark;
 		}
 	}
 	.dropdown-item.active {
@@ -369,7 +369,7 @@ $dark-stakes-banned-background: #3e314c;
 	}
 
 	.table th, .table td {
-		border-top-color: darken($labels-dark, 30);
+		border-top-color: #3A3B3C;
 	}
 	hr {
 		border-top-color: #3A3B3C;
@@ -496,7 +496,7 @@ $dark-stakes-banned-background: #3e314c;
 		color: $labels-dark;
 	}
 	.border-bottom {
-		border-bottom-color: darken($labels-dark, 30) !important;
+		border-bottom-color: #3A3B3C !important;
 	}
 
 	// coin balance history chart
@@ -563,7 +563,7 @@ $dark-stakes-banned-background: #3e314c;
 		color: $labels-dark;
 	}
 	.smart-contract-form-buttons {
-		border-top-color: darken($labels-dark, 30);
+		border-top-color: #3A3B3C;
 		.btn-no-border {
 			background-color: $dark-light;
 			border-color: $dark-light;
@@ -575,12 +575,12 @@ $dark-stakes-banned-background: #3e314c;
 		}
 	}
 	.add-contract-libraries-wrapper {
-		border-top-color: darken($labels-dark, 30);
+		border-color: #3A3B3C;
 	}
 
 	.token-tile-view-more:before, .token-tile-view-more:after {
-		border-top-color: darken($labels-dark, 30);
-		border-bottom-color: darken($labels-dark, 30);
+		border-top-color: #3A3B3C;
+		border-bottom-color: #3A3B3C;
 	}
 
 	// Form Controlls
@@ -591,7 +591,7 @@ $dark-stakes-banned-background: #3e314c;
 		transition: border-color 0.15s ease-in-out;
 
 		&[readonly] {
-			background-color: $dark-light !important;
+			background-color: $body-dark !important;
 		}
 
 		&::placeholder {
@@ -599,7 +599,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 		&:focus {
 			background-color: $body-dark;
-			border-color: $dark-secondary;
+			border-color: $body-dark;
 			color: $dark-primary;
 		}
 
@@ -653,9 +653,9 @@ $dark-stakes-banned-background: #3e314c;
 
 	// Verify other explorers
 	.verify-other-explorers-elem {
-		border-color: darken($labels-dark, 30);
+		border-color: #3A3B3C;
 		.exp-logo {
-			border-right-color: darken($labels-dark, 30);
+			border-right-color: #3A3B3C;
 		}
 		.exp-content {
 			h3 {
@@ -700,7 +700,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 
 		.modal-footer {
-			border-top-color: darken($labels-dark, 30);
+			border-top-color: #3A3B3C;
 		}
 
 		.modal-content {
@@ -773,10 +773,10 @@ $dark-stakes-banned-background: #3e314c;
 		color: $dark-primary !important;
 	}
 	.table-bordered, .table-bordered td, .table-bordered th {
-		border-color: darken($labels-dark, 30);
+		border-color: #3A3B3C;
 	}
 	.dark-theme-applied .table td, .dark-theme-applied .table th, .dark-theme-applied hr {
-		border-top-color: darken($labels-dark, 30);
+		border-top-color: #3A3B3C;
 	}
 	.btn-copy-ico svg path {
 		fill: $dark-primary;
@@ -825,7 +825,7 @@ $dark-stakes-banned-background: #3e314c;
 		}
 
 		.modal-footer {
-			border-top-color: darken($labels-dark, 30);
+			border-top-color: #3A3B3C;
 		}
 
 		.modal-content {
@@ -902,12 +902,12 @@ $dark-stakes-banned-background: #3e314c;
 	//stakes
 	.modal-stake-right {
 		.stakes-progress {
-		  border-left-color: darken($labels-dark, 30);
+		  border-left-color: #3A3B3C;
 		}
 	}
 
 	.modal-stake-left {
-		border-right-color: darken($labels-dark, 30);
+		border-right-color: #3A3B3C;
 	}
 
 	.stakes-progress-data-progress, .stakes-progress-info-value {
@@ -986,20 +986,20 @@ $dark-stakes-banned-background: #3e314c;
 
 	// primary buttons
 	.btn-full-primary, .button-primary {
-		background: $dark-primary;
-		border-color: $dark-primary;
+		background-color: $dark-secondary;
+		border-color: $dark-secondary;
 		color: $body-dark;
 		&:hover {
-			background: darken($dark-primary, 6);
-			border-color: darken($dark-primary, 6);
+			background-color: $dark-primary;
+			border-color: $dark-primary;
 			color: $body-dark;
 		}
 
 		&[disabled] {
 			&,
 			&:hover {
-			  background-color: $dark-secondary;
-			  border-color: $dark-secondary;
+			  background-color: #3A3B3C;
+			  border-color: #3A3B3C;
 			}
 		}
 	}
@@ -1143,7 +1143,7 @@ $dark-stakes-banned-background: #3e314c;
 .dark-theme-applied .dropdown-item.active:not(.header), .dark-theme-applied .dropdown-item:not(.header):hover, .dark-theme-applied .dropdown-item:not(.header):focus {
     background-image: none;
     width: 100%;
-    background-color: #18191A !important;
+    background-color: $body-dark !important;
 }
 
 @media (max-width: 991.98px) {
@@ -1170,6 +1170,6 @@ $dark-stakes-banned-background: #3e314c;
 	color: $dark-secondary;
 	&:hover {
 		color: $dark-primary;
-		background-color: #18191A;
+		background-color: $body-dark;
 	}
 }

@@ -154,6 +154,9 @@ $card-tab-icon-color-active: #fff !default;
 
 .card-body {
   padding: $card-horizontal-padding;
+  @include media-breakpoint-down(sm) {
+    padding: 16px;
+  }
 }
 
 .card-body-flex-column-space-between {
@@ -212,6 +215,18 @@ $card-tab-icon-color-active: #fff !default;
   margin-right: 1.5rem;
   text-align: center;
   transition: $transition-cont;
+  
+  &:not(.active) {
+    &:first-child {
+      @include media-breakpoint-down(md) {
+        padding-top: 0.75rem;
+      }
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    margin-right: 0;
+  }
 
   &:hover {
     background-color: rgba($card-tab-active, .15);

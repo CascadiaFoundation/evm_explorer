@@ -127,7 +127,7 @@
   }
 }
 
-@mixin btn-line($bg-color: #fff, $text-color: $secondary, $font-size: 12px) {
+@mixin btn-line($bg-color: #fff, $text-color: $secondary, $font-size: 14px) {
   -webkit-appearance: none !important;
   align-items: center;
   background-color: $bg-color;
