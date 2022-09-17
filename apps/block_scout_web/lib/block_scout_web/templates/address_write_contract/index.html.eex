@@ -5,13 +5,12 @@
   <%= render BlockScoutWeb.AddressView, "overview.html", address: @address, is_proxy: is_proxy, conn: @conn, exchange_rate: @exchange_rate, coin_balance_status: @coin_balance_status, counters_path: @counters_path %>
 
   <%= render BlockScoutWeb.AddressView, "_tabs.html", address: @address, is_proxy: is_proxy, conn: @conn %>
-  
-  <div data-smart-contract-functions data-hash="<%= to_string(@address.hash) %>" data-type="<%= @type %>" data-action="<%= @action %>" data-url="<%= smart_contract_path(@conn, :index) %>">
-    <div class="mt-3">
+  <div class="card mt-3">    
+    <div class="card-body" data-smart-contract-functions data-hash="<%= to_string(@address.hash) %>" data-type="<%= @type %>" data-action="<%= @action %>" data-url="<%= smart_contract_path(@conn, :index) %>">
       <%= render BlockScoutWeb.CommonComponentsView, "_loading_spinner.html", loading_text: gettext("Loading...") %>
+      <%# <div class="mt-3">
+      </div> %>
     </div>
-  </div>
-  <div class="card">
   </div>
   <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/smart-contract-helpers.js") %>"></script>
 </section>
