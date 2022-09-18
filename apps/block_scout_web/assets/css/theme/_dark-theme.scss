@@ -730,7 +730,25 @@ $dark-stakes-banned-background: #3e314c;
 	#qrModal {
 		.close {
 			color: $dark-primary;
+			opacity: 1;
 		}
+
+		.modal-footer {
+			border-top-color: #3A3B3C;
+		}
+
+		.btn-primary {
+			background-color: $dark-secondary;
+			border-color: $dark-secondary;
+			color: $body-dark;
+			border-radius: 0;
+			&:focus,
+			&:hover {
+				background-color: $dark-primary;
+				border-color: $dark-primary;
+			}
+		}
+
 	}
 
 	// API docs dropdown content
@@ -832,11 +850,11 @@ $dark-stakes-banned-background: #3e314c;
 			background-color: $dark-light-bg;
 
 			.btn-primary {
-				background-color: $dark-primary;
-				border-color: $dark-primary;
+				background-color: $dark-secondary;
+				border-color: $dark-secondary;
 				&:hover {
-					background-color: $dark-primary;
-					border-color: $dark-primary;
+					background-color: $dark-secondary;
+					border-color: $dark-secondary;
 				}
 			}
 		}
