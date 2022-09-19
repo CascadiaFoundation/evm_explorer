@@ -33,8 +33,8 @@
 </div>
 <% end %>
 <%= for {function, counter} <- Enum.with_index(@read_only_functions ++ @read_functions_required_wallet, 1) do %>
-  <div class="d-flex py-2 border-bottom" data-function>
-    <div class="py-2 pr-2 text-nowrap">
+  <div class="d-flex py-2 align-items-center border-bottom" data-function>
+    <div class="pr-2 text-nowrap">
       <%= counter %>.
       <%= case function["type"] do %>
         <% "fallback" -> %>

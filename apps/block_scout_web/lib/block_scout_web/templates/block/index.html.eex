@@ -2,7 +2,7 @@
   <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
   <div class="section">
     <div class="header">
-      <h3><%= gettext("%{block_type}s", block_type: @block_type) %></h3>
+      <h3 class="m-0"><%= gettext("%{block_type}s", block_type: @block_type) %></h3>
       <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
     </div>
     <div class="content" data-async-listing="<%= @current_path %>">
