@@ -174,7 +174,7 @@
 <section class="container mt-4">
   <div class="section">
     <div class="header">
-      <h3><%= gettext "Blocks" %></h3>
+      <h3 class="m-0"><%= gettext "Blocks" %></h3>
       <%= link(gettext("View All Blocks"), to: blocks_path(BlockScoutWeb.Endpoint, :index), class: "text-secondary float-right") %>
     </div>
     <div class="content">
@@ -236,7 +236,7 @@
 
   <div class="section mt-4">
     <div class="header">
-      <h3><%= gettext "Transactions" %></h3>
+      <h3 class="m-0"><%= gettext "Transactions" %></h3>
       <%= link(gettext("View All Transactions"), to: transaction_path(BlockScoutWeb.Endpoint, :index), class: "text-secondary float-right") %>
     </div>
     <div class="content">

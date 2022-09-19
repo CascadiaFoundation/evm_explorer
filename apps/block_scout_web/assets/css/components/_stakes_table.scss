@@ -10,6 +10,9 @@ $stakes-link-color: $primary !default;
 
 .addresses-table-container {
   margin: 0 -24px;
+  @include media-breakpoint-down(sm) {
+    margin: 0 -16px;
+  }
   .stakes-table-container {
     table {
       width: 100%;
