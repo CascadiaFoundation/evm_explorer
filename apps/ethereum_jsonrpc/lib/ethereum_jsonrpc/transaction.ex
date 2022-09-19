@@ -164,15 +164,15 @@ defmodule EthereumJSONRPC.Transaction do
           "hash" => hash,
           "input" => input,
           "nonce" => nonce,
-          "r" => r,
-          "s" => s,
+          # "r" => r,
+          # "s" => s,
           "to" => to_address_hash,
           "transactionIndex" => index,
-          "v" => v,
+          # "v" => v,
           "value" => value,
-          "type" => type,
-          "maxPriorityFeePerGas" => max_priority_fee_per_gas,
-          "maxFeePerGas" => max_fee_per_gas
+          # "type" => type,
+          # "maxPriorityFeePerGas" => max_priority_fee_per_gas,
+          # "maxFeePerGas" => max_fee_per_gas
         } = transaction
       ) do
     result = %{
@@ -185,15 +185,15 @@ defmodule EthereumJSONRPC.Transaction do
       index: index,
       input: input,
       nonce: nonce,
-      r: r,
-      s: s,
+      r: 0,
+      s: 0,
       to_address_hash: to_address_hash,
-      v: v,
+      v: 0,
       value: value,
       transaction_index: index,
-      type: type,
-      max_priority_fee_per_gas: max_priority_fee_per_gas,
-      max_fee_per_gas: max_fee_per_gas
+      # type: type,
+      # max_priority_fee_per_gas: max_priority_fee_per_gas,
+      # max_fee_per_gas: max_fee_per_gas
     }
 
     if transaction["creates"] do

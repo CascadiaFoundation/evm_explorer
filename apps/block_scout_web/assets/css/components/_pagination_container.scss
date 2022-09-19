@@ -1,7 +1,7 @@
-$pagination-page-link-background: #f5f6fa !default;
-$pagination-page-link-color: #a3a9b5 !default;
-$pagination-page-link-background-active: $primary !default;
-$pagination-page-link-color-active: #fff !default;
+$pagination-page-link-background: #E4E6EB !default;
+$pagination-page-link-color: #B0B3B8 !default;
+$pagination-page-link-background-active: #E4E6EB !default;
+$pagination-page-link-color-active: #B0B3B8 !default;
 
 @mixin pagination-container-base($background-color, $text-color) {
   background-color: $background-color;
@@ -25,14 +25,6 @@ $pagination-page-link-color-active: #fff !default;
     flex-direction: column;
   }
 
-  &.position-bottom {
-    padding-top: 30px;
-  }
-
-  &.position-top {
-    padding-bottom: 30px;
-  }
-
   .pagination-limit {
     align-items: center;
     color: #033333;
@@ -54,11 +46,6 @@ $pagination-page-link-color-active: #fff !default;
     margin: 0 0 0 auto;
     padding: 0;
 
-    @include media-breakpoint-down(sm) {
-      justify-content: space-between;
-      margin: 0;
-    }
-
     .page-item {
       margin: 0 5px 0 0;
 
@@ -79,14 +66,16 @@ $pagination-page-link-color-active: #fff !default;
 
     .page-link {
       @include pagination-container-base($pagination-page-link-background, $pagination-page-link-color);
+      box-sizing: border-box;
       align-items: center;
-      border-radius: 2px;
+      border-radius: 0px;
       display: flex;
-      font-size: 12px;
-      font-weight: 600;
-      height: 24px;
+      font-size: 14px;
+      line-height: 1.5rem;
+      font-weight: normal;
       margin: 0;
-      padding: 0 8px;
+      min-height: 30px;
+      padding: 2px 8px;
       position: relative;
       user-select: none;
       text-align: center;
@@ -157,7 +146,6 @@ $pagination-page-link-color-active: #fff !default;
   font-size: 12px;
   font-weight: 600;
   height: 24px;
-  margin-top: -25px;
   text-align: right;
   @include media-breakpoint-down(sm) {
     display: none;
@@ -170,15 +158,15 @@ $pagination-page-link-color-active: #fff !default;
 
 .page-number {
   background-color: $pagination-page-link-background;
-  border-width: 1px;
-  border-style: solid;
-  border-radius: 2px;
+  border: none;
+  border-radius: 0px;
   border-color: $pagination-page-link-color;
   color: $pagination-page-link-color;
 }
 
-.page-number:focus {
-  border: 1px solid $pagination-page-link-color;
+.page-number:focus, .page-number:focus-visible {
+  border: none;
+  outline: none;
 }
 
 .fml5 {

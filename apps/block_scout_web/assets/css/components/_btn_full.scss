@@ -4,3 +4,7 @@ $btn-full-primary-color: #fff !default;
 .btn-full-primary {
   @include btn-full($btn-full-primary-bg, $btn-full-primary-color);
 }
+
+.btn-full-secondary {
+  @include btn-full(transparent, $btn-full-primary-color);
+}

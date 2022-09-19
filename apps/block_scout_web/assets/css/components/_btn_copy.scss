@@ -19,7 +19,7 @@ $btn-copy-small-dimensions: 22px !default;
   }
   &.btn-copy-icon-small {
     &.btn-copy-icon-custom {
-      position: absolute;
+      position: static;
     }
     @include square-icon-button-inline($btn-copy-color, $btn-copy-small-dimensions);
     &.btn-copy-icon-no-borders {
@@ -51,11 +51,5 @@ $btn-copy-small-dimensions: 22px !default;
 }
 
 .btn-copy-tx-raw-input-container {
-  position: relative;
   width: 19px;
-}
-
-.btn-copy-tx-raw-input {
-  position: absolute;
-  bottom: 0;
 }

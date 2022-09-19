@@ -72,10 +72,10 @@ $colors: map-merge(
 );
 
 $primary: $indigo !default;
-$dark-primary: #9b62ff !default;
-$dark-primary-alternate: #9b62ff !default;
+$dark-primary: #E4E6EB !default;
+$dark-primary-alternate: #E4E6EB !default;
 $secondary: #7dd79f !default;
-$dark-secondary: #87e1a9 !default;
+$dark-secondary: #B0B3B8 !default;
 $tertiary: $purple !default;
 $success: $green !default;
 $info: $cyan !default;
@@ -263,8 +263,7 @@ $transition-cont: all 0.4s ease-in-out !default;
 // Font, line-height, and color for body text, headings, and more.
 
 // stylelint-disable value-keyword-case
-$font-family: Nunito, "Helvetica Neue", Arial, sans-serif,
-  "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !default;
+$font-family: Rubik, sans-serif !default;
 $font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
   "Liberation Mono", "Courier New", monospace !default;
 $font-family-base: $font-family !default;
@@ -618,7 +617,7 @@ $form-feedback-invalid-color: theme-color("danger") !default;
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width: 10rem !default;
+$dropdown-min-width: 12rem !default;
 $dropdown-padding-y: 0.5rem !default;
 $dropdown-spacer: 0.125rem !default;
 $dropdown-bg: $white !default;
@@ -978,7 +977,7 @@ $close-text-shadow: 0 1px 0 $white !default;
 
 // Code
 
-$code-font-size: 87.5% !default;
+$code-font-size: 100% !default;
 $code-color: $pink !default;
 
 $kbd-padding-y: 0.2rem !default;

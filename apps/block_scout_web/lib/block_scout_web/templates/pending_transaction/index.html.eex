@@ -1,13 +1,11 @@
 <section class="container" data-page="transaction-pending-list">
   <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
-  <div class="card">
-    <div class="card-body" data-async-listing="<%= @current_path %>">
-      <h1 class="card-title list-title-description"><%= gettext "Pending Transactions" %></h1>
-
-      <div class="list-top-pagination-container-wrapper">
-        <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
-      </div>
- 
+  <div class="section">
+    <div class="header">
+      <h3 class="m-0"><%= gettext "Pending Transactions" %></h3>
+      <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "top", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
+    </div>
+    <div class="content" data-async-listing="<%= @current_path %>">
       <div data-selector="channel-batching-message" style="display: none;">
         <div data-selector="reload-button" class="alert alert-info">
           <a href="#" class="alert-link"><span data-selector="channel-batching-count"></span> <%= gettext "More transactions have come in" %></a>
@@ -25,9 +23,9 @@
       <div data-items data-selector="transactions-pending-list">
         <%= render BlockScoutWeb.CommonComponentsView, "_tile-loader.html" %>
       </div>
-
+    </div>
+    <div class="footer">
       <%= render BlockScoutWeb.CommonComponentsView, "_pagination_container.html", position: "bottom", cur_page_number: "1", show_pagination_limit: true, data_next_page_button: true, data_prev_page_button: true %>
-
     </div>
   </div>
   <script defer data-cfasync="false" src="<%= static_path(@conn, "/js/pending-transactions.js") %>"></script>

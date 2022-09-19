@@ -12,6 +12,11 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
   box-shadow: $box-shadow;
   padding: 0;
   width: 100%;
+  min-width: 12rem;
+
+  @media (max-width: 991.98px) {
+    box-shadow: none;
+  }
 
   &.right {
     left: auto;
@@ -21,7 +26,7 @@ $dropdown-menu-item-hover-background: rgba($secondary, 0.1) !default;
   .nav-item & {
     border-top-left-radius: 0 !important;
     border-top-right-radius: 0 !important;
-    top: 45px;
+    top: 56px;
 
     .dropdown-item:first-child {
       border-top-left-radius: 0;

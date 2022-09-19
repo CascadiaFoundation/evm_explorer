@@ -53,10 +53,6 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
   flex-grow: 1;
   padding: 15px 0 0 0;
 
-  @include media-breakpoint-up(md) {
-    min-width: 500px;
-  }
-
   @include media-breakpoint-down(md) {
     display: flex;
     flex-direction: column;
@@ -66,7 +62,7 @@ $dashboard-banner-chart-axis-font-color-alt: #333;
 
 .dashboard-banner-chart {
   flex-grow: 1;
-  margin: 15px 0 20px 0;
+  margin: 0 0 20px 0;
   position: relative;
   min-height: 100px;
   height: calc(100% - 86px);
