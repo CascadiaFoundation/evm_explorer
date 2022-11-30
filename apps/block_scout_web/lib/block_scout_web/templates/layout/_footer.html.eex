@@ -19,7 +19,10 @@
 
     <div class="row">
       <div class="col-md-5 col-12 md-mb-0 mb-4">
-        <h2 class="mb-3">Sophon Foundation</h2>
+      <div class="logo-svg pb-3">
+        <%= render BlockScoutWeb.IconsView, "_logo_icon.html" %>
+      </div>
+        <!-- <h2 class="mb-3">Sophon Foundation</h2> -->
         <p class="footer-info-text">
           <%= gettext("Copyright © 2022 CRO Protocol Labs. All rights reserved.") %><br/>
           <%= gettext("Powered by Blockscout") %>
@@ -69,7 +72,7 @@
 
       <%# begin: Modified %>
       <div class="d-none">
-      
+
         <% main_nets = main_nets(other_networks()) %>
 
         <%= unless Enum.empty?(main_nets) do %>
