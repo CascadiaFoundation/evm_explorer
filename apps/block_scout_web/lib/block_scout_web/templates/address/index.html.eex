@@ -1,7 +1,7 @@
 <section class="container">
   <%= render BlockScoutWeb.Advertisement.TextAdView, "index.html", conn: @conn %>
 
-	<h3><%= gettext "Ether" %> <%= gettext "Addresses" %></h3>
+	<h3><%= gettext "CC" %> <%= gettext "Addresses" %></h3>
 
   <div class="card">
     <div class="card-body" data-async-load data-async-listing="<%= @current_path %>">
