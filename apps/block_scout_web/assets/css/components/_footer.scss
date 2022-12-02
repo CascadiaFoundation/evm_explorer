@@ -1,6 +1,6 @@
-$footer-background-color: $secondary !default;
+$footer-background-color: #003264 !default;
 $footer-title-color: #fff !default;
-$footer-text-color: rgba(#fff, 0.7) !default;
+$footer-text-color: #B0B3B8 !default;
 $footer-link-color: $footer-text-color !default;
 $footer-item-disc-color: $primary !default;
 $footer-social-icon-color: $footer-text-color !default;
@@ -8,13 +8,13 @@ $footer-logo-height: 28px !default;
 $footer-logo-width: auto !default;
 
 .footer {
-  background: $footer-background-color;
+  background: #003264 !important; 
   color: $footer-text-color;
   font-size: 14px;
   line-height: 1.5rem;
   margin-top: 36px;
   position: relative;
-  padding: 36px 0;
+  padding: 36px 0 8px;
 
   @media (max-width: $breakpoint-md) {
     width: 100%;
@@ -60,12 +60,45 @@ $footer-logo-width: auto !default;
   }
 }
 
+.footer-logo-text {
+  color: #fff;
+  font-size: 24px;
+}
+
 .footer-link {
+  font-size: 16px;
   color: $footer-link-color;
 
   &:hover {
-    color: $footer-link-color;
-    text-decoration: underline;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+
+.footer-link-title {
+  font-size: 16px;
+  color: #fff;
+}
+
+.disabled-link {
+  pointer-events: none;
+}
+
+.privacy-list {
+  display: inline-flex;  
+  list-style: none;
+  padding-left: 0px;
+  margin-top: 100px;
+  padding: 0 15px;
+
+  a {
+    text-decoration: none;
+  }
+
+  li {
+    &:last-child {
+      padding-left: 20px
+    }
   }
 }
 

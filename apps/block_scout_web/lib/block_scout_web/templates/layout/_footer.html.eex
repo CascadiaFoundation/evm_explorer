@@ -18,53 +18,43 @@
     <% col_size = if Enum.empty?(other_explorers), do: 3, else: 2 %>
 
     <div class="row">
-      <div class="col-md-5 col-12 md-mb-0 mb-4">
-      <div class="logo-svg pb-3">
-        <%= render BlockScoutWeb.IconsView, "_logo_icon.html" %>
-      </div>
-        <!-- <h2 class="mb-3">Sophon Foundation</h2> -->
-        <p class="footer-info-text">
-          <%= gettext("Copyright © 2022 CRO Protocol Labs. All rights reserved.") %><br/>
-          <%= gettext("Powered by Blockscout") %>
-        </p>
+      <div class="col-md-3 col-12 md-mb-0">
+        <h2 class="footer-logo-text mb-3">Cascadia</h2>
       </div>
 
-      <div class="col-12 col-md-7 footer-list">
+      <div class="col-12 col-md-9 footer-list">
         <div class="row">
           <div class="col-md-3 col-6">
-            <h2 class="mb-3"><%= gettext("Sophon") %></h2>
+            <h2 class="footer-link-title mb-3"><%= gettext("RESOURCES") %></h2>
             <ul>
-              <li><a href="<%= issue_link(@conn) %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Submit an Issue") %></a></li>
-              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:github_link] %>" rel="noreferrer" class="footer-link"><%= gettext("Contribute") %></a></li>
-              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:chat_link] %>" rel="noreferrer" class="footer-link"><%= gettext("Chat") %></a></li>
-              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:forum_link] %>" rel="noreferrer" class="footer-link"><%= gettext("Support") %></a></li>
+              <!--<li><a href="<%= issue_link(@conn) %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Submit an Issue") %></a></li>-->
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:whitepaper_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Whitepaper") %></a></li>
+              <li><a href="#" rel="noreferrer" class="footer-link disabled-link"><%= gettext("Technology") %></a></li>
+              <!--<li><a href="<%= Application.get_env(:block_scout_web, :footer)[:forum_link] %>" rel="noreferrer" class="footer-link"><%= gettext("Support") %></a></li>-->
               <%= if System.get_env("COIN_NAME") && System.get_env("NETWORK_PATH") && System.get_env("SUBNETWORK") && System.get_env("JSON_RPC") && System.get_env("CHAIN_ID") do %>
                 <li><a class="footer-link js-btn-add-chain-to-mm btn-add-chain-to-mm in-footer" style="cursor: pointer;"><%= gettext("Add") <> " #{System.get_env("SUBNETWORK")}" %></a></li>
               <% end %>
             </ul>
           </div>
           <div class="col-md-3 col-6">
-            <h2 class="mb-3"><%= gettext("Ohter Links") %></h2>
+            <h2 class="footer-link-title mb-3"><%= gettext("DEVELOPERS") %></h2>
             <ul>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Sophon") %></a></li>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Web Wallet") %></a></li>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Documentation") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:documentation_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Documentation") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:github_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Github") %></a></li>
             </ul>
           </div>
           <div class="col-md-3 col-6 mt-md-0 mt-3">
-            <h2 class="mb-3"><%= gettext("Mainnet") %></h2>
+            <h2 class="footer-link-title mb-3"><%= gettext("FOUNDATION") %></h2>
             <ul>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("EVM Explorer") %></a></li>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Native Explorer") %></a></li>
+              <li><a href="#" rel="noreferrer" class="footer-link disabled-link" target="_blank"><%= gettext("Careers") %></a></li>
+              <li><a href="#" rel="noreferrer" class="footer-link disabled-link" target="_blank"><%= gettext("Contact Us") %></a></li>
             </ul>
           </div>
           <div class="col-md-3 col-6 mt-md-0 mt-3">
-            <h2 class="mb-3"><%= gettext("Testnet") %></h2>
+            <h2 class="footer-link-title mb-3"><%= gettext("SOCIAL") %></h2>
             <ul>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("EVM Explorer Testnet") %></a></li>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Legacy Explorer") %></a></li>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Testnet") %></a></li>
-              <li><a href="#" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Native Explorer") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:discord_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Discord") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:twitter_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Twitter") %></a></li>
             </ul>
           </div>
         </div>
@@ -111,6 +101,13 @@
         <% end %>
       </div>
       <%# end: Modified %>
+    </div>
+
+    <div class="row">
+      <ul class="privacy-list">
+        <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:privacy_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Privacy Policy") %></a></li>
+        <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:terms_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Terms of Use") %></a></li>
+      </ul>
     </div>
   </div>
 </footer>
