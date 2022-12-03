@@ -1,4 +1,4 @@
-$footer-background-color: #003264 !default;
+$footer-background-color: $secondary !default;
 $footer-title-color: #fff !default;
 $footer-text-color: #B0B3B8 !default;
 $footer-link-color: $footer-text-color !default;
@@ -8,7 +8,6 @@ $footer-logo-height: 28px !default;
 $footer-logo-width: auto !default;
 
 .footer {
-  background: #003264 !important; 
   color: $footer-text-color;
   font-size: 14px;
   line-height: 1.5rem;
