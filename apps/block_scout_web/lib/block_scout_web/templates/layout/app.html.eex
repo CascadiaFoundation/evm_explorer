@@ -55,8 +55,8 @@
     <script defer data-cfasync="false">
       function applyDarkMode() {
         //if (localStorage.getItem("current-color-mode") === "dark") {
-          document.body.className += " " + "dark-theme-applied";
-          document.body.style.backgroundColor = "#18191A";
+          document.body.className += " " + "light-theme-applied";
+          //document.body.style.backgroundColor = "#18191A";
         //}
       }
       window.onload = applyDarkMode()

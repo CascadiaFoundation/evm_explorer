@@ -24,12 +24,22 @@
 @import "theme/custom_contracts/circles-theme";
 
 
+// :export {
+//   dashboardBannerChartAxisFontColor: $dashboard-banner-chart-axis-font-color;
+//   dashboardLineColorMarket: $dashboard-line-color-market;
+//   dashboardLineColorMarketDarkTheme: $dashboard-line-color-market-dark-theme;
+//   dashboardLineColorPrice: $dashboard-line-color-price;
+//   dashboardLineColorPriceDarkTheme: $dashboard-line-color-price-dark-theme;
+//   dashboardLineColorTransactions: $dashboard-line-color-transactions;
+//   dashboardLineColorTransactionsDarkTheme: $dashboard-line-color-transactions-dark-theme;
+// }
 :export {
-  dashboardBannerChartAxisFontColor: $dashboard-banner-chart-axis-font-color;
-  dashboardLineColorMarket: $dashboard-line-color-market;
-  dashboardLineColorMarketDarkTheme: $dashboard-line-color-market-dark-theme;
-  dashboardLineColorPrice: $dashboard-line-color-price;
-  dashboardLineColorPriceDarkTheme: $dashboard-line-color-price-dark-theme;
-  dashboardLineColorTransactions: $dashboard-line-color-transactions;
-  dashboardLineColorTransactionsDarkTheme: $dashboard-line-color-transactions-dark-theme;
+  dashboardBannerChartAxisFontColor: #212529;
+  dashboardLineColorMarket: #ff0;
+  dashboardLineColorMarketDarkTheme: #0f0;
+  dashboardLineColorPrice: #0ff;
+  dashboardLineColorPriceDarkTheme: #f0f;
+  dashboardLineColorTransactions: #003264;
+  dashboardLineColorTransactionsDarkTheme:#003264;
+;
 }

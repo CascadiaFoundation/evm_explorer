@@ -8,15 +8,31 @@ $footer-logo-height: 28px !default;
 $footer-logo-width: auto !default;
 
 .footer {
+  background-color: #003264;
   color: $footer-text-color;
   font-size: 14px;
   line-height: 1.5rem;
   margin-top: 36px;
   position: relative;
-  padding: 36px 0 8px;
+  padding: 64px 0px 8px;
 
   @media (max-width: $breakpoint-md) {
     width: 100%;
+  }
+}
+
+.footer-body {
+  padding: 0px 24px 0px;
+  @media (min-width: $breakpoint-md) {
+    padding: 0px 40px 0px;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    padding: 0px 64px 0px;
+  }
+
+  @media (min-width: $breakpoint-xxl) {
+    padding: 0px 128px 0px;
   }
 }
 
@@ -60,13 +76,15 @@ $footer-logo-width: auto !default;
 }
 
 .footer-logo-text {
+  font-family: Montserrat;
   color: #fff;
   font-size: 24px;
 }
 
 .footer-link {
+  font-family: Manrope;
   font-size: 16px;
-  color: $footer-link-color;
+  color: #B0B3B8;
 
   &:hover {
     color: #fff;
@@ -75,6 +93,7 @@ $footer-logo-width: auto !default;
 }
 
 .footer-link-title {
+  font-family: Manrope;
   font-size: 16px;
   color: #fff;
 }
@@ -87,7 +106,7 @@ $footer-logo-width: auto !default;
   display: inline-flex;  
   list-style: none;
   padding-left: 0px;
-  margin-top: 100px;
+  margin-top: 80px;
   padding: 0 15px;
 
   a {
@@ -112,7 +131,7 @@ $footer-logo-width: auto !default;
       align-items: center;
       display: flex;
       line-height: 1.5rem;
-      margin-bottom: 12px;
+      margin-bottom: 4px;
 
       &:last-child {
         margin: 0;

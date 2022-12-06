@@ -20,6 +20,7 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
 }
 
 .api-anchors-list {
+  padding: 20px;
   background-color: $api-anchors-list-background-color;
   column-gap: 40px;
   display: grid;
@@ -185,13 +186,17 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   }
 }
 
+.api-doc-list-item-contents{ 
+  border-bottom: 1px solid #B0B3B6;
+}
+
 .api-doc-parameters-container {
-  border-top: 1px solid #3A3B3C;
+  border-bottom: 1px solid #B0B3B6;
   padding: 1rem;
 }
 
 .api-doc-parameters-list {
-  border-bottom: 1px solid #3A3B3C;
+  border-bottom: 1px solid #B0B3B6;
 }
 
 .api-doc-parameters-list-title {
@@ -222,6 +227,11 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   }
 }
 
+.tab-content {
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
+}
+
 .api-doc-parameters-list-item-title {
   color: #333;
   font-size: 16px;
@@ -248,4 +258,9 @@ $api-doc-list-item-view-more-color: $api-doc-list-item-title-color !default;
   strong {
     font-weight: 700;
   }
+}
+
+.api-doc-list-item-code-block{
+  border: 1px solid #dee2e6;
+  background-color: #f8f9fa;
 }

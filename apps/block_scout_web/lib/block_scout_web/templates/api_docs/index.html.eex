@@ -6,8 +6,7 @@
     </div>
     <div class="content">
       <div class="card">
-        <div class="card-body">
-          <p class="mb-3 text-secondary"><%= gettext "This API is provided for developers transitioning their applications from Etherscan to BlockScout. It supports GET and POST requests." %></p>
+        <div class="box-body">
           <div class="api-anchors-list">
             <%= for module <- @documentation do %>
               <%= render "_module_item.html", module: module %>
