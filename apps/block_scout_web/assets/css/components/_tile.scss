@@ -1,6 +1,6 @@
 $tile-type-block-color: $primary !default;
 $tile-type-uncle-color: $cyan !default;
-$tile-type-reorg-color: $purple !default;
+$tile-type-reorg-color: #003264 !default;
 $tile-type-emission-reward-color: $lilac !default;
 $tile-type-transaction-color: $blue !default;
 $tile-type-contract-call-color: $green !default;
@@ -14,8 +14,8 @@ $tile-type-progress-bar-color: $primary !default;
 $tile-status-error-reason: #ff7986 !default;
 $tile-status-awaiting-internal-transactions: $warning !default;
 $tile-padding: 1rem;
-$tile-title-color: #E4E6EB !default;
-$tile-body-a-color: #5959d8 !default;
+$tile-title-color: #003264 !default;
+$tile-body-a-color: #003264 !default;
 
 @mixin generate-tile-block($prefix, $color, $label-color: false) {
   &#{ $prefix } {
@@ -32,18 +32,21 @@ $tile-body-a-color: #5959d8 !default;
 
     .tile-label {
       @if ($label-color) {
-        color: $label-color;
+        // color: $label-color;
+        color: #003264;
       } @else {
-        color: $color;
+        // color: $color;
+        color: #003264;
       }
     }
 
     .tile-status-label {
       color: inherit;
+      color: #003264;
     }
 
     .tile-transaction-type-block {
-      background-color: #2F3031 !important;
+      background-color: #999393 !important;
       color: $color;
     }
   }
@@ -111,10 +114,14 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile-bottom-contents {
-  background-color: transparent;
+  background-color: #f6f7f9;
   font-size: 1rem;
   line-height: 1.2;
   padding: 1rem;
+}
+
+.text-truncate {
+  color: #6C757D;
 }
 
 .tile-transactions {
@@ -170,8 +177,14 @@ $tile-body-a-color: #5959d8 !default;
 }
 
 .tile {
+  border: 1px solid #B0B3B8;
+  border-left: 5px solid #003264;
   span[data-address-hash] {
     color: $dark-primary;
+  }
+
+  .tile-box {
+    margin-left: 8px;
   }
 
   a[data-test=token_link] {
@@ -283,7 +296,7 @@ $tile-body-a-color: #5959d8 !default;
       font-weight: 400;
       line-height: 1.2;
       padding: 1rem;
-      border-bottom: 1px solid #3A3B3C;
+      border-bottom: 1px solid #f6f7f9;
     }
   }
 
