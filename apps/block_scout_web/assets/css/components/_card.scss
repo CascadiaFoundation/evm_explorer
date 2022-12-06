@@ -153,6 +153,9 @@ $card-tab-icon-color-active: #fff !default;
 }
 
 .card-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   padding: $card-horizontal-padding;
   @include media-breakpoint-down(sm) {
     padding: 16px;

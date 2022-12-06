@@ -107,8 +107,8 @@
                   <% {:error, :disabled} -> %>
                     <%= nil %>
                   <% average_block_time -> %>
-                    <span class="dashboard-banner-network-stats-label mb-2">
-                      <%= gettext "Average block time" %>
+                    <span class="dashboard-banner-network-stats-label">
+                      <%= gettext "Average Block Time" %>
                     </span>
                     <span class="dashboard-banner-network-stats-value" data-selector="average-block-time">
                       <%= Timex.format_duration(average_block_time, Explorer.Counters.AverageBlockTimeDurationFormat) %>
@@ -120,8 +120,8 @@
           <div class="col-md-6 col-sm-12">
             <div class="card">
               <div class="card-body">
-                <span class="dashboard-banner-network-stats-label mb-2">
-                  <%= gettext "Total transactions" %>
+                <span class="dashboard-banner-network-stats-label">
+                  <%= gettext "Total Transactions" %>
                 </span>
                 <div class="d-flex">
                   <span class="dashboard-banner-network-stats-value" data-selector="transaction-count">
@@ -145,8 +145,8 @@
           <div class="col-md-6 col-sm-12 mt-4">
             <div class="card">
               <div class="card-body">
-                <span class="dashboard-banner-network-stats-label mb-2">
-                  <%= gettext "Total blocks" %>
+                <span class="dashboard-banner-network-stats-label">
+                  <%= gettext "Total Blocks" %>
                 </span>
                 <span class="dashboard-banner-network-stats-value" data-selector="block-count">
                   <%= BlockScoutWeb.Cldr.Number.to_string!(@block_count, format: "#,###") %>
@@ -157,8 +157,8 @@
           <div class="col-md-6 col-sm-12 mt-4">
             <div class="card">
               <div class="card-body">
-                <span class="dashboard-banner-network-stats-label mb-2">
-                  <%= gettext "Wallet addresses" %>
+                <span class="dashboard-banner-network-stats-label">
+                  <%= gettext "Wallet Addresses" %>
                 </span>
                 <span class="dashboard-banner-network-stats-value" data-selector="address-count">
                   <%= BlockScoutWeb.Cldr.Number.to_string!(@address_count, format: "#,###") %>
@@ -187,10 +187,12 @@
         <div hidden data-selector="loading-message" class="col-lg-3" >
           <div data-selector="chain-block">
             <div class="tile tile-type-block n-p d-flex flex-column">
-              <a class="tile-title"><span class="tile-loader tile-label-loader"></span> </a>
-              <div class="tile-bottom-contents">
-                <div class="dark-block-loader"></div>
-                <div class="dark-block-loader"></div>
+              <div class="tile-box">
+                <a class="tile-title"><span class="tile-loader tile-label-loader"></span> </a>
+                <div class="tile-bottom-contents">
+                  <div class="dark-block-loader"></div>
+                  <div class="dark-block-loader"></div>
+                </div>
               </div>
             </div>
           </div>
