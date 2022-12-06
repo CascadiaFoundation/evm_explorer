@@ -152,6 +152,11 @@ $card-tab-icon-color-active: #fff !default;
   }
 }
 
+.box-body {
+  display: block;
+  padding: $card-horizontal-padding;
+}
+
 .card-body {
   display: flex;
   align-items: center;
