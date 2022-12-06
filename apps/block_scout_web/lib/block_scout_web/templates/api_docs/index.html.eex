@@ -2,7 +2,7 @@
   <div class="section mb-5">
     <div class="header">
       <h3 class="m-0"><%= gettext("API Documentation") %></h3>
-      <p class="api-text-monospace text-secondary m-0" data-endpoint-url="<%= api_url() %>">[ <%= gettext "Base URL:" %> <%= api_url()%> ]</p>
+      <p class="api-text-monospace text-secondary m-0" data-endpoint-url="https://explorer.cascadia.foundation/api">[ <%= gettext "Base URL:" %> <%= gettext "https://explorer.cascadia.foundation/api" %> ]</p>
     </div>
     <div class="content">
       <div class="card">

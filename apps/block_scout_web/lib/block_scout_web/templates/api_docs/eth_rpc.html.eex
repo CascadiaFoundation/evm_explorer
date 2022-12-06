@@ -2,7 +2,7 @@
   <div class="section">
     <div class="header">
       <h3 class="m-0"><%= gettext("ETH RPC API Documentation") %></h3>
-      <p class="api-text-monospace text-secondary m-0" data-endpoint-url="<%= eth_rpc_api_url() %>">[ <%= gettext "Base URL:" %> <%= eth_rpc_api_url()%> ]</p>    
+      <p class="api-text-monospace text-secondary m-0" data-endpoint-url="https://explorer.cascadia.foundation/api/eth-rpc">[ <%= gettext "Base URL:" %> <%= gettext "https://explorer.cascadia.foundation/api/eth-rpc" %> ]</p>    
     </div>
     <div class="content">
       <div class="card">
