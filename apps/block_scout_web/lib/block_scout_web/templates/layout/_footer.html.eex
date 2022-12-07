@@ -109,5 +109,9 @@
         <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:terms_link] %>" rel="noreferrer" class="footer-link" target="_blank"><%= gettext("Terms of Use") %></a></li>
       </ul>
     </div>
+    <div>
+      <button type="button" class="btn scroll-btn" data-dismiss="modal" button-scroll><span><%= render BlockScoutWeb.IconsView, "_arrow_up_icon.html" %></span></button>
+    </div>
   </div>
+  <script type="application/javascript" src='<%= static_path(@conn, "/js/scroll.js") %>'></script>
 </footer>
