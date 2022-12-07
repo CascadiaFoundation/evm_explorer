@@ -46,7 +46,7 @@
     <div class="content">
       <!-- Block Details -->
       <div class="card js-ad-dependant-mb-2">
-        <div class="card-body fs-14" style="line-height: 32px;">
+        <div class="detail-body fs-14" style="line-height: 32px;">
           <!-- Block Height -->
           <dl class="row">
             <dt class="col-sm-3 col-lg-2 text-muted">

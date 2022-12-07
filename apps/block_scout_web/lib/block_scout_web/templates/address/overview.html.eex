@@ -43,7 +43,7 @@
     </div>
     <div class="content">
       <div class="card">
-        <div class="card-body fs-14" style="line-height: 31px;">
+        <div class="detail-body fs-14" style="line-height: 31px;">
           <%= cond do %>
             <% Enum.member?(dark_forest_addresses_list_0_4, current_address) -> %>
               <%= render BlockScoutWeb.AddressView, "_custom_view_df_title.html", title: "zkSnark space warfare (v0.4)" %>
