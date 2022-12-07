@@ -167,6 +167,10 @@ $card-tab-icon-color-active: #fff !default;
   }
 }
 
+.detail-body {
+  padding: $card-horizontal-padding;
+}
+
 .card-body-flex-column-space-between {
   display: flex;
   flex-direction: column;
@@ -219,7 +223,7 @@ $card-tab-icon-color-active: #fff !default;
   display: flex;
   font-size: 1rem;
   font-weight: normal;
-  padding-bottom: 0.75rem;
+  padding: 0.75rem;
   margin-right: 1.5rem;
   text-align: center;
   transition: $transition-cont;

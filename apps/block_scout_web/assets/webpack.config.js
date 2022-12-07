@@ -50,6 +50,7 @@ const appJs =
       'validated-transactions': './js/pages/transactions.js',
       'pending-transactions': './js/pages/pending_transactions.js',
       'transaction': './js/pages/transaction.js',
+      'scroll': './js/pages/scroll.js',
       'verification-form': './js/pages/verification_form.js',
       'token-counters': './js/pages/token_counters.js',
       'token-transfers': './js/pages/token/token_transfers.js',
