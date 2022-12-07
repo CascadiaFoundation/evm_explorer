@@ -79,6 +79,7 @@ $footer-logo-width: auto !default;
   font-family: Montserrat;
   color: #fff;
   font-size: 24px;
+  margin-bottom: 48px;
 }
 
 .footer-link {
@@ -102,11 +103,21 @@ $footer-logo-width: auto !default;
   pointer-events: none;
 }
 
+.privacy-row {
+  justify-content: center;
+  @media (min-width: $breakpoint-md) {
+    justify-content: left;
+  }
+}
+
 .privacy-list {
   display: inline-flex;  
   list-style: none;
   padding-left: 0px;
-  margin-top: 80px;
+  margin-top: 60px;
+  @media (min-width: $breakpoint-md) {
+   margin-top: 80px;
+  }
   padding: 0 15px;
 
   a {
@@ -120,31 +131,104 @@ $footer-logo-width: auto !default;
   }
 }
 
-.footer-list {
-  padding-top: 0;
-  ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-
-    li {
-      align-items: center;
-      display: flex;
-      line-height: 1.5rem;
-      margin-bottom: 4px;
-
-      &:last-child {
-        margin: 0;
-      }
-
-      a {
-        transition: $transition-cont;
-        &:hover {
-          text-decoration: none;
-          color: #fff;
+.desktop-footer {
+  display: none;
+  @media (min-width: $breakpoint-md) {
+    display: block;
+  }
+  & .footer-list {
+    padding-top: 0;
+  
+    ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+  
+      li {
+        align-items: center;
+        display: flex;
+        line-height: 1.5rem;
+        margin-bottom: 4px;
+  
+        &:last-child {
+          margin: 0;
         }
-        &:focus {
-          color: darken($footer-text-color, 5);
+  
+        a {
+          transition: $transition-cont;
+  
+          &:hover {
+            text-decoration: none;
+            color: #fff;
+          }
+  
+          &:focus {
+            color: darken($footer-text-color, 5);
+          }
+        }
+      }
+    }
+  }
+}
+
+.mobile-footer {
+  width: 100% !important;
+  display: block;
+  @media (min-width: $breakpoint-md) {
+    display: none;
+  }
+
+  & .accordion-box {
+    padding: 15px;
+    & button {
+      padding: 0;
+    }
+    & .accordion {
+      background-color: #003264;
+      color: #FFFFFF;
+      cursor: pointer;
+      width: 100%;
+      border: none;
+      text-align: left;
+      outline: none;
+      font-size: 15px;
+      transition: 0.4s;
+      font-family: 'Manrope';
+      font-size: 16px;
+      padding: 0;
+      height: 60px;
+    }
+    
+    & .active, .accordion:hover {
+      background-color: #003264;
+    }
+    
+    & .accordion:after {
+      content: '\002C4';
+      color: #FFFFFF;
+      font-weight: bold;
+      float: right;
+      margin-left: 5px;
+    }
+    
+    & .active:after {
+      content: "\002C5";
+    }
+    
+    & .panel {
+      color: #FFFFFF;
+      background-color: 003264;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.2s ease-out;
+
+      & ul {
+        list-style: none;
+        padding: 0;
+        border-top: 1px solid beige;
+
+        & li {
+          padding: 10px 0;
         }
       }
     }
@@ -153,4 +237,16 @@ $footer-logo-width: auto !default;
 
 .footer-brand {
   text-decoration: none !important;
+}
+
+.scroll-btn {
+  width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 25px;
+    right: 20px;
+    display: block;
+    background-color: white !important;
+    border-radius: 7px !important;
+    padding: 0 !important;
 }
