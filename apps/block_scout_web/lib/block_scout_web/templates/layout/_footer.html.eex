@@ -48,7 +48,7 @@
               <h2 class="footer-link-title mb-3"><%= gettext("FOUNDATION") %></h2>
               <ul>
                 <li><a href="#" rel="noreferrer" class="footer-link disabled-link" target="_blank"><%= gettext("Careers") %></a></li>
-                <li><a href="#" rel="noreferrer" class="footer-link disabled-link" target="_blank"><%= gettext("Contact Us") %></a></li>
+                <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:contact_link] %>" class="footer-link" target="_blank"><%= gettext("Contact Us") %></a></li>
               </ul>
             </div>
             <div class="col-md-3 col-6 mt-md-0 mt-3">
@@ -68,7 +68,7 @@
           <div class="panel">
             <ul class="mobile-ul">
               <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:whitepaper_link] %>" class="footer-link" target="_blank"><%= gettext("Whitepaper") %></a></li>
-                <li><a href="#" class="footer-link disabled-link"><%= gettext("Technology") %></a></li>
+              <li><a href="#" class="footer-link disabled-link"><%= gettext("Technology") %></a></li>
             </ul>
           </div>
 
@@ -76,7 +76,7 @@
           <div class="panel">
             <ul class="mobile-ul">
               <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:documentation_link] %>" class="footer-link" target="_blank"><%= gettext("Documentation") %></a></li>
-                <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:github_link] %>" class="footer-link" target="_blank"><%= gettext("Github") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:github_link] %>" class="footer-link" target="_blank"><%= gettext("Github") %></a></li>
             </ul>
           </div>
 
@@ -84,7 +84,7 @@
           <div class="panel">
             <ul class="mobile-ul">
               <li><a href="#" class="footer-link disabled-link" target="_blank"><%= gettext("Careers") %></a></li>
-                <li><a href="#" class="footer-link disabled-link" target="_blank"><%= gettext("Contact Us") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:contact_link] %>" class="footer-link" target="_blank"><%= gettext("Contact Us") %></a></li>
             </ul>
           </div>
 
@@ -92,7 +92,7 @@
           <div class="panel">
             <ul class="mobile-ul">
               <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:discord_link] %>" class="footer-link" target="_blank"><%= gettext("Discord") %></a></li>
-                <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:twitter_link] %>" class="footer-link" target="_blank"><%= gettext("Twitter") %></a></li>
+              <li><a href="<%= Application.get_env(:block_scout_web, :footer)[:twitter_link] %>" class="footer-link" target="_blank"><%= gettext("Twitter") %></a></li>
             </ul>
           </div>
 
