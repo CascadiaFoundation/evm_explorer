@@ -30,10 +30,12 @@ config :block_scout_web, :footer,
   whitepaper_link: System.get_env("FOOTER_WHITEPAPER_LINK", "https://drive.google.com/file/d/1lnZwSqrwYKe6Pp9wOMxM76gQbfqqFTHH/view"),
   documentation_link: System.get_env("FOOTER_DOCUMENTATION_LINK", "https://drive.google.com/file/d/1f8fSAYkqb1gPhgir505QT6u8H8lD1Exh/view?usp=sharing"),
   github_link: System.get_env("FOOTER_GITHUB_LINK", "https://github.com/CascadiaFoundation"),
+  contact_link: System.get_env("FOOTER_CONTACT_LINK", "mailto:contact@cascadia.foundation"),
   discord_link: System.get_env("FOOTER_DISCORD_LINK", "https://discord.gg/cascadia"),
   twitter_link: System.get_env("FOOTER_TWITTER_LINK", "https://www.twitter.com/CascadiaSystems"),
   privacy_link: System.get_env("FOOTER_PRIVACY_LINK", "https://www.cascadia.foundation/privacy"),
   terms_link: System.get_env("FOOTER_TERMS_LINK", "https://www.cascadia.foundation/terms")
+
 
 
 ######################
