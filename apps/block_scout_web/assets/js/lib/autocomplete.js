@@ -6,6 +6,21 @@ import { appendTokenIcon } from './token_icon'
 import { escapeHtml } from './utils'
 import xss from 'xss'
 
+$(function () {
+  if (window.location.pathname === '/') {
+    $('.intro-page').removeClass('d-none')
+    $('.intro-logo').fadeOut(3000)
+    setInterval(
+      () => {
+        $('.intro-page').addClass('d-none')
+        $('.layout-container').removeClass('d-none')
+      }, 3000
+    )
+  } else {
+    $('.layout-container').removeClass('d-none')
+  }
+})
+
 const placeHolder = 'Search by address, token symbol, name, transaction hash, or block number'
 const dataSrc = async (query, id) => {
   try {

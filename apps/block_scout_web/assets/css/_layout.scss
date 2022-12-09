@@ -14,3 +14,20 @@
 .logs-hash {
   line-height: 24px !important;
 }
+
+.intro-page {
+  background-color: #000000;
+  min-height: 100vh;
+
+  & .intro-logo {
+    width: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  & .st1 {
+    fill: white;
+  }
+}
